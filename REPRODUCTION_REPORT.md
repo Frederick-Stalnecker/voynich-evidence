@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-05-26 00:39 UTC
+Generated: 2026-05-26 00:41 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.
@@ -72,7 +72,7 @@ PASS = result matches stated value within tolerance. FAIL = run `./reproduce.sh`
 | Folio | Claimed Identification | Status |
 |-------|------------------------|--------|
 | f6v | Terminalia chebula (a-ru-ra / haritaki) | ✅ CONFIRMED |
-| f3r | Phyllanthus emblica (skyu-ru-ra / amla) | ✅ CONFIRMED |
+| f3r | NOT CONFIRMED — amla identification retracted (batch3402). Red root inconsistent with P. emblica. Rubia cordifolia (madder) is EXPLORATORY-STRONG. See NEGATIVE_RESULTS.md §2 RV-02. | ❌ |
 | f51v| Terminalia bellirica (ba-ru-ra / bibhitaki) | ✅ CONFIRMED |
 
 *Botanical confirmation requires visual cross-reference. See paper §7 and decoded folio pages.*

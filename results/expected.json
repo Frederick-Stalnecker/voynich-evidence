@@ -78,10 +78,10 @@
 
   "triphala": {
     "f6v_confirmed": true,
-    "f3r_confirmed": true,
+    "f3r_confirmed": false,
     "f51v_confirmed": true,
     "plant_f6v": "Terminalia chebula (a-ru-ra / haritaki)",
-    "plant_f3r": "Phyllanthus emblica (skyu-ru-ra / amla)",
+    "plant_f3r": "NOT CONFIRMED — amla identification retracted (batch3402). Red root inconsistent with P. emblica. Rubia cordifolia (madder) is EXPLORATORY-STRONG. See NEGATIVE_RESULTS.md §2 RV-02.",
     "plant_f51v": "Terminalia bellirica (ba-ru-ra / bibhitaki)"
   }
 }
