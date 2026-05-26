@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use or challenge this evidence repository, please cite as:"
 type: software
-title: "Voynich Manuscript Decipherment — Reproducible Evidence Repository"
+title: "Voynich Manuscript Decipherment — Evidence Repository"
 abstract: >
   Reproducible statistical evidence for the decipherment of Voynich Manuscript
   (Beinecke MS 408) as a pharmaceutical text in a hybrid Classical Mongolian /
@@ -30,10 +30,10 @@ references:
     authors:
       - family-names: Stalnecker
         given-names: Frederick Davis
-    title: "Voynich Manuscript Decipherment — Statistical Evidence for a Mongolian-Tibetan Pharmaceutical Register"
+    title: "Manuscript in review at Cryptologia (2026)"
     journal: Cryptologia
     year: 2026
-    notes: "Manuscript in review (2026). Citation will be updated upon publication."
+    notes: "Title and volume/page details will be updated upon publication."
   - type: dataset
     authors:
       - family-names: Zandbergen
