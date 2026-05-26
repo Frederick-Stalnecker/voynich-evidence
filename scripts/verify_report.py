@@ -156,7 +156,7 @@ def run():
     lines.append("```bash")
     lines.append("python scripts/1_cipher.py")
     lines.append("```")
-    lines.append("Results in `results/cipher.json` include match rates for all R values (0–22).\n")
+    lines.append("Results in `results/cipher.json` include match rates for all R values (0–19).\n")
     lines.append("**To verify vocabulary token counts:**")
     lines.append("```bash")
     lines.append("python scripts/3_vocabulary.py")

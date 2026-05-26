@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-05-26 16:12 UTC
+Generated: 2026-05-26 18:03 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.
@@ -85,7 +85,7 @@ PASS = result matches stated value within tolerance. FAIL = run `./reproduce.sh`
 ```bash
 python scripts/1_cipher.py
 ```
-Results in `results/cipher.json` include match rates for all R values (0–22).
+Results in `results/cipher.json` include match rates for all R values (0–19).
 
 **To verify vocabulary token counts:**
 ```bash

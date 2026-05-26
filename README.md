@@ -80,7 +80,9 @@ These results are independent: the gradient holds whether or not the cipher is c
 **To test R=14 against every other rotation value:**
 ```bash
 python scripts/1_cipher.py
-# results/cipher.json contains match rates for R=0 through R=22
+# results/cipher.json contains match rates for R=0 through R=19
+# (EVA rotation alphabet has 20 independent characters; h and c are excluded
+# as compound-only markers — so the full rotation space is R=0..19)
 ```
 
 **To test the syllabary's "no alternative reading" criterion:**

@@ -11,7 +11,9 @@ A permutation test (N=10,000 random shuffles) yields p=8.43e-12.
 
 Methodology:
   1. Extract all unique tokens from the corpus (ZL3b-n.txt)
-  2. For each R in 0..22, apply a character-level rotation of the EVA alphabet
+  2. For each R in 0..19, apply a character-level rotation of the EVA alphabet
+     (EVA_ALPHA contains 20 independent characters; h and c are compound-only
+     markers excluded from the rotation alphabet)
   3. Count how many top-200 corpus tokens, after rotation, match confirmed vocabulary
   4. Compare R=14's match rate to the permuted null distribution
   5. Report p-value and write results/cipher.json
@@ -115,7 +117,7 @@ def run():
     print(f"Top 200 tokens by frequency selected for sweep.")
 
     # -- R sweep --
-    print("\nRotation sweep (R=0 to R=22):")
+    print(f"\nRotation sweep (R=0 to R={len(EVA_ALPHA)-1}):")
     print(f"  {'R':>3}  {'Match Rate':>12}  {'Hits/200':>10}")
     print(f"  {'---':>3}  {'----------':>12}  {'--------':>10}")
 
