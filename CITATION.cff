@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use or challenge this evidence repository, please cite as:"
+type: software
+title: "Voynich Manuscript Decipherment — Reproducible Evidence Repository"
+abstract: >
+  Reproducible statistical evidence for the decipherment of Voynich Manuscript
+  (Beinecke MS 408) as a pharmaceutical text in a hybrid Classical Mongolian /
+  Tibetan Sowa Rigpa register, encrypted by rotational substitution cipher at R=14.
+  Contains five independent pre-registered statistical tests, all passing, with full
+  corpus verification scripts and negative results documentation.
+authors:
+  - family-names: Stalnecker
+    given-names: Frederick Davis
+    email: guestent@gmail.com
+repository-code: "https://github.com/[to-be-announced]"
+keywords:
+  - Voynich Manuscript
+  - Cryptologia
+  - Sowa Rigpa
+  - Tibetan medicine
+  - cipher
+  - EVA
+  - pharmacology
+  - pre-registration
+license: CC-BY-4.0
+version: "1.0.0"
+date-released: "2026-05-26"
+references:
+  - type: article
+    authors:
+      - family-names: Stalnecker
+        given-names: Frederick Davis
+    title: "[Title per Cryptologia publication]"
+    journal: Cryptologia
+    year: 2026
+    notes: "Submission ID 264889452"
+  - type: dataset
+    authors:
+      - family-names: Zandbergen
+        given-names: René
+      - family-names: Landini
+        given-names: Gabriel
+    title: "Zandbergen-Landini EVA Transcription of Voynich Manuscript (ZL3b-n.txt)"
+    url: "https://www.voynich.nu/data/ZL3b-n.txt"
+    notes: "Version 3b, 2025-05-13. SHA-256: bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
