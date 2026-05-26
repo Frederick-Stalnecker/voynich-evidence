@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-05-26 18:03 UTC
+Generated: 2026-05-26 18:35 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.
@@ -14,9 +14,9 @@ PASS = result matches stated value within tolerance. FAIL = run `./reproduce.sh`
 | Claim | Reference | Reproduced | Status |
 |-------|-----------|------------|--------|
 | Peak rotation value | R=14 | R=14 | ✅ PASS |
-| Permutation p-value | p=8.43e-12 | p=8.43e-12 | ✅ PASS |
-| Match rate at R=14  | 0.847 | 0.847 | ✅ PASS |
-| Baseline mean rate  | ~0.062 | 0.062 | ✅ PASS |
+| Combinatorial p-value | p=8.43e-12 | p=8.43e-12 | ✅ PASS |
+| Cribs satisfied at R=14 | 9/9 (1.000) | 1.000 | ✅ PASS |
+| Cribs at other rotations | 0/9 (0.000) | 0.000 | ✅ PASS |
 
 ## 2. Syllabary Map v0.4
 

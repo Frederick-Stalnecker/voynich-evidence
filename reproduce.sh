@@ -30,7 +30,7 @@ EXPECTED_HASH="bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
 echo "============================================================"
 echo "  Voynich Decipherment — Reproduction Pipeline"
 echo "  https://github.com/Frederick-Stalnecker/voynich-evidence"
-echo "  Estimated runtime: 3–8 minutes"
+echo "  Estimated runtime: under 30 seconds"
 echo "============================================================"
 echo ""
 
@@ -69,8 +69,8 @@ fi
 echo ""
 
 # -- Step 1: Cipher --
-echo "[1/5] Cipher parameter (R=14) sweep and permutation test..."
-echo "      (This step runs 10,000 permutations — ~2 minutes)"
+echo "[1/5] Cipher parameter (R=14) — crib convergence test..."
+echo "      (9 class-marker cribs × 17 rotations; completes in seconds)"
 $PYTHON scripts/1_cipher.py
 echo ""
 

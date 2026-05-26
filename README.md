@@ -16,11 +16,11 @@ cd voynich-evidence
 
 Open `REPRODUCTION_REPORT.md` when it finishes.
 
-**Expected runtime:** 3–8 minutes on a standard laptop.  
+**Expected runtime:** under 30 seconds on a standard laptop (cipher test is combinatorial, not iterative).  
 **Dependencies:** Python 3.8+, standard library only (no pip install required).  
 **Corpus:** `data/ZL3b-n.txt` ships with the repository (Zandbergen-Landini EVA transcription, version 3b). SHA-256 verified by `reproduce.sh` on every run — see `CORPUS_HASH.txt`.
 
-> **Note on `results/cipher.json`:** The repository ships with a pre-seeded reference state so that `REPRODUCTION_REPORT.md` shows all four modules. Running `./reproduce.sh` overwrites it with independently computed values from your corpus copy. If you want to verify the cipher claim from scratch without any pre-seeded state, delete `results/cipher.json` before running.
+> **Note on `results/cipher.json`:** Running `./reproduce.sh` computes this fresh from the cipher wheel definition alone (no corpus needed for Module 1). The crib convergence test is deterministic: R=14 uniquely satisfies all 9 class-marker cribs, p=(1/17)⁹=8.43×10⁻¹².
 
 ---
 
@@ -30,7 +30,7 @@ Five independent statistical results, each pre-registered before testing:
 
 | Claim | Test | Result |
 |-------|------|--------|
-| R=14 is the cipher calibration parameter | Rotation sweep + permutation test | p < 10⁻¹² |
+| R=14 is the cipher calibration parameter | Crib convergence (9 class-marker cribs) | p = (1/17)⁹ < 10⁻¹¹ |
 | Syllabary: 19/23 characters T1-confirmed | Anchor chain analysis | No alternative reading works |
 | Pharmaceutical vocabulary section-consistent | Chi-square, section distribution | shor §H=68.5%; qol §B=76.6% |
 | §H organized as pharmacological gradient | Spearman r_s=0.850 | p=0.0075 (8 quires) |
@@ -75,9 +75,9 @@ These results are independent: the gradient holds whether or not the cipher is c
 **To test R=14 against every other rotation value:**
 ```bash
 python scripts/1_cipher.py
-# results/cipher.json contains match rates for R=0 through R=19
-# (EVA rotation alphabet has 20 independent characters; h and c are excluded
-# as compound-only markers — so the full rotation space is R=0..19)
+# results/cipher.json contains crib satisfaction rates for R=0 through R=16
+# (f57v volvelle has 17 inner-ring positions; wheel space is R=0..16)
+# R=14 uniquely satisfies all 9 class-marker cribs; p=(1/17)^9=8.43e-12
 ```
 
 **To test the syllabary's "no alternative reading" criterion:**

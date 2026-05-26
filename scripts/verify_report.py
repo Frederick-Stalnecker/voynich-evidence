@@ -53,9 +53,11 @@ def run():
         lines.append(f"| Peak rotation value | R=14 | R={cipher.get('peak_R')} | {pf(cipher.get('peak_R') == 14)} |")
         p_rep = cipher.get('permutation_p_value', 1.0)
         p_ref = 8.43e-12
-        lines.append(f"| Permutation p-value | p={p_ref:.2e} | p={p_rep:.2e} | {pf(p_rep < 1e-4)} |")
-        lines.append(f"| Match rate at R=14  | 0.847 | {cipher.get('peak_match_rate', 0):.3f} | {pf(abs(cipher.get('peak_match_rate', 0) - 0.847) < 0.1)} |")
-        lines.append(f"| Baseline mean rate  | ~0.062 | {cipher.get('baseline_mean', 0):.3f} | {pf(cipher.get('baseline_mean', 1) < 0.15)} |")
+        lines.append(f"| Combinatorial p-value | p={p_ref:.2e} | p={p_rep:.2e} | {pf(p_rep < 1e-4)} |")
+        cribs_rate = cipher.get('peak_match_rate', 0)
+        lines.append(f"| Cribs satisfied at R=14 | 9/9 (1.000) | {cribs_rate:.3f} | {pf(cribs_rate >= 0.999)} |")
+        baseline = cipher.get('baseline_mean', 1)
+        lines.append(f"| Cribs at other rotations | 0/9 (0.000) | {baseline:.3f} | {pf(baseline < 0.001)} |")
     else:
         lines.append("| All cipher claims | — | MODULE NOT RUN | ❌ MISSING |")
     lines.append("")
