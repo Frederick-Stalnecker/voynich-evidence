@@ -69,6 +69,8 @@ These results are independent: the gradient holds whether or not the cipher is c
 | 11 vocabulary items + section distributions (§6) | `scripts/3_vocabulary.py` |
 | 113-plant botanical classification (§7) | `scripts/4_botanical.py` |
 | GL4313 pharmacological gradient (§8) | `scripts/5_gradient.py` |
+
+*Note: Two pre-registered species identifications (f2r, f9r) were superseded by later sprint waves. See [PRE_REGISTRATIONS.md § Corrections](PRE_REGISTRATIONS.md#corrections) for the full erratum.*
 | Full report with pass/fail per claim | `scripts/verify_report.py` |
 
 ---
@@ -141,6 +143,7 @@ reflect an earlier corpus version. Both discrepancies are documented in `NEGATIV
 
 - 5 of 23 phonological units remain unmapped (j, u, v, x, z — together <3% of corpus characters)
 - `scripts/4_botanical.py` requires `data/botanical_dataset.json` — included in this repository (113 confirmed plants, batch3597)
+- Two early botanical identifications (f2r, f9r) were falsified by later sprint waves and re-confirmed with different species. See [Corrections](PRE_REGISTRATIONS.md#corrections) in PRE_REGISTRATIONS.md for the full erratum and the THEOS2 commit chain.
 - The three-column decoded folio pages (f67r1, f70r2, f68v3, f70r1) are available in the companion `ASTROMEDICA-Book` repository
 
 ---
