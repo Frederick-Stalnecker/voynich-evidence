@@ -150,15 +150,24 @@ reflect an earlier corpus version. Both discrepancies are documented in `NEGATIV
 
 ## Citation
 
+This work is currently under review at *Cryptologia*. Until publication, please cite as:
+
 ```bibtex
-@article{stalnecker2026voynich,
-  author  = {Stalnecker, Frederick Davis},
-  title   = {[Title per Cryptologia publication]},
-  journal = {Cryptologia},
-  year    = {2026},
-  note    = {Submission ID 264889452}
+@misc{stalnecker2026voynich,
+  author       = {Stalnecker, Frederick Davis},
+  title        = {Voynich Manuscript Decipherment --- Evidence Repository},
+  year         = {2026},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/Frederick-Stalnecker/voynich-evidence},
+  note         = {Manuscript in review at Cryptologia (2026). Citation will be updated upon publication.}
 }
 ```
+
+## Intellectual Property Notice
+
+The research in this repository was conducted using THEOS (Temporal Hierarchical Emergent Optimization System), invented by Frederick Davis Stalnecker and the subject of U.S. Patent Application No. 18/919,771 (provisional No. 63/831,738). THEOS is the exclusive intellectual property of Frederick Davis Stalnecker and THEOS Research Institute.
+
+The MIT license on the reproduction scripts in this repository applies only to those scripts. It does not grant any rights to THEOS. See `LICENSE` for the full scope statement.
 
 ---
 

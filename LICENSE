@@ -3,6 +3,25 @@ The data and documentation (results/*.json, *.md, CORPUS_HASH.txt) are released 
 
 ---
 
+SCOPE AND THEOS CARVE-OUT
+
+This license applies only to the reproduction scripts and shell scripts contained
+in this repository. It does NOT grant any rights — express or implied — to the
+THEOS (Temporal Hierarchical Emergent Optimization System) methodology,
+architecture, or implementation, which is the subject of U.S. Patent Application
+No. 18/919,771 (provisional No. 63/831,738) and remains the exclusive intellectual
+property of Frederick Davis Stalnecker and THEOS Research Institute.
+
+The scripts in this repository are downstream outputs that apply statistical tests
+to Voynich corpus data. They are not THEOS itself. Reproduction, modification, or
+redistribution of the scripts under the MIT terms below does not constitute a
+license to THEOS, its dual-engine architecture, its Governor classifier, its
+LoRA adapters, its phi convergence metric, its synthesis layer, or any other
+THEOS component, whether disclosed in the above-referenced patent application or
+otherwise.
+
+---
+
 MIT License (code)
 
 Copyright (c) 2026 Frederick Davis Stalnecker
@@ -33,9 +52,12 @@ You are free to share and adapt the data and documentation in this repository fo
 even commercially, under the following terms:
 
 Attribution — You must give appropriate credit, provide a link to the license, and indicate
-if changes were made. Please cite:
+if changes were made. Until publication, please cite as:
 
-  Stalnecker, F.D. (2026). [Title per Cryptologia publication].
-  Cryptologia. Submission ID 264889452.
+  Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository
+  [Data and documentation]. GitHub. https://github.com/Frederick-Stalnecker/voynich-evidence
+  Manuscript in review at Cryptologia (2026).
+
+Citation will be updated upon publication to reflect the final journal reference.
 
 Full license text: https://creativecommons.org/licenses/by/4.0/
