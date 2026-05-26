@@ -167,4 +167,4 @@ reflect an earlier corpus version. Both discrepancies are documented in `NEGATIV
 Technical questions (reproduction, methodology): guestent@gmail.com  
 Media and general inquiries: guestent@gmail.com
 
-*Repository maintained by Frederick Davis Stalnecker. Research conducted with THEOS (Temporal Hierarchical Emergent Optimization System).*
+*Repository maintained by Frederick Davis Stalnecker. Research conducted with THEOS (Temporal Hierarchical Emergent Optimization System), invented by Frederick Davis Stalnecker (patent-pending U.S. App 18/919,771).*

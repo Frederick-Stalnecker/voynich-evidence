@@ -196,7 +196,7 @@ honestly.
 
 ## Section 4 — Unmapped Characters in the Syllabary
 
-The THEOS syllabary maps 18 of 23 functional EVA character positions. Five remain
+The THEOS syllabary (Frederick Davis Stalnecker, patent-pending U.S. App 18/919,771) maps 18 of 23 functional EVA character positions. Five remain
 unmapped:
 
 | EVA character | Corpus frequency | Status |

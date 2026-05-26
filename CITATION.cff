@@ -43,3 +43,9 @@ references:
     title: "Zandbergen-Landini EVA Transcription of Voynich Manuscript (ZL3b-n.txt)"
     url: "https://www.voynich.nu/data/ZL3b-n.txt"
     notes: "Version 3b, 2025-05-13. SHA-256: bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  - type: software
+    authors:
+      - family-names: Stalnecker
+        given-names: Frederick Davis
+    title: "THEOS: Temporal Hierarchical Emergent Optimization System"
+    notes: "AI governance framework used in this research. Patent-pending U.S. App 18/919,771; provisional 63/831,738."

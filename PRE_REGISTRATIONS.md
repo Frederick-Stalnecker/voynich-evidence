@@ -1,4 +1,5 @@
 # Pre-Registration Record — Voynich Decipherment (THEOS Project)
+*THEOS (Temporal Hierarchical Emergent Optimization System) invented by Frederick Davis Stalnecker, patent-pending U.S. App 18/919,771.*
 
 ## Why this document exists
 

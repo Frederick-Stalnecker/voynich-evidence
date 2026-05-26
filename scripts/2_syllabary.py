@@ -6,9 +6,10 @@ Verifies the 19 T1-confirmed character-to-phoneme assignments by demonstrating
 that for each confirmed anchor token, the character assignments are the ONLY
 reading that produces a known Tibetan or Mongolian pharmaceutical term.
 
-The syllabary was built inductively using the THEOS dual-engine system:
-each character's phoneme value was confirmed by finding at least one context
-where its value is forced — where it cannot be anything else.
+The syllabary was built inductively using THEOS (Frederick Davis Stalnecker,
+patent-pending U.S. App 18/919,771): each character's phoneme value was
+confirmed by finding at least one context where its value is forced — where
+it cannot be anything else.
 
 Key anchor chains verified here:
   1. tsheos → /tshe-os/ — Tibetan ཚེ (tshe) = life-force [e → /e/ anchor]
