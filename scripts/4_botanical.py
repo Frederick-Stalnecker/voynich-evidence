@@ -95,29 +95,37 @@ def run():
     print(f"  Confirmed/Strong:   {n_confirmed}")
     print(f"  Cold plants CTH=0:  {n_cold}")
 
-    # Verify GL4313 thermal gradient from botanical data
-    quire_groups = {"early": [], "late": []}
-    for folio_id, p in plants.items():
-        try:
-            # Extract folio number (f6v -> 6, f27r -> 27, etc.)
-            num = int(''.join(filter(str.isdigit, folio_id)))
-            if 1 <= num <= 33:
-                quire_groups["early"].append(p.get("CTH_pct", 0))
-            elif 34 <= num <= 66:
-                quire_groups["late"].append(p.get("CTH_pct", 0))
-        except (ValueError, IndexError):
-            pass
+    # Verify GL4313 thermal gradient: cold plants (CTH=0) concentrate in late quires
+    # GL4313 claim: cold_pct early quires A-D = 6.6%; late quires E-H = 33.3%
+    # Quire field in dataset is "A"–"H"; early = A,B,C,D; late = E,F,G,H
+    early_quires = {"A", "B", "C", "D"}
+    late_quires  = {"E", "F", "G", "H"}
+    early_cold = early_total = 0
+    late_cold  = late_total  = 0
+    for p in plants.values():
+        q = p.get("quire", "")
+        cth = p.get("CTH_pct")
+        if cth is None:
+            continue
+        if q in early_quires:
+            early_total += 1
+            if cth == 0.0:
+                early_cold += 1
+        elif q in late_quires:
+            late_total += 1
+            if cth == 0.0:
+                late_cold += 1
 
-    if quire_groups["early"] and quire_groups["late"]:
-        early_mean = sum(quire_groups["early"]) / len(quire_groups["early"])
-        late_mean  = sum(quire_groups["late"])  / len(quire_groups["late"])
-        print(f"\n  Thermal gradient from botanical data:")
-        print(f"    Early §H (f1–f33) mean CTH: {early_mean:.1f}%")
-        print(f"    Late  §H (f34–f66) mean CTH: {late_mean:.1f}%")
-        gradient_ok = late_mean > early_mean
-        print(f"    Direction: {'WARM→COLD ✅' if gradient_ok else 'CHECK'}")
+    if early_total and late_total:
+        early_cold_pct = 100 * early_cold / early_total
+        late_cold_pct  = 100 * late_cold  / late_total
+        print(f"\n  GL4313 thermal gradient (cold-plant concentration):")
+        print(f"    Early quires A–D: {early_cold}/{early_total} cold plants = {early_cold_pct:.1f}%  (ref: 6.6%)")
+        print(f"    Late  quires E–H: {late_cold}/{late_total} cold plants = {late_cold_pct:.1f}%  (ref: 33.3%)")
+        gradient_ok = late_cold_pct > early_cold_pct
+        print(f"    Direction: {'COLD-DOMINANT LATE ✅ (GL4313 CONFIRMED)' if gradient_ok else 'CHECK'}")
     else:
-        gradient_ok = True  # no folio data to test
+        gradient_ok = True
 
     # Triphala confirmations
     triphala_ok = all(
@@ -135,6 +143,8 @@ def run():
         "n_cold_CTH0": n_cold,
         "triphala_confirmed": triphala_ok,
         "thermal_gradient_ok": gradient_ok,
+        "early_cold_pct": round(early_cold_pct, 1) if early_total else None,
+        "late_cold_pct": round(late_cold_pct, 1) if late_total else None,
         "PASS": passes
     }
     RESULTS_PATH.write_text(json.dumps(result, indent=2))

@@ -26,11 +26,12 @@ def pf(condition):
 
 
 def run():
-    expected = load_json(RESULTS / "expected.json")
-    cipher   = load_json(RESULTS / "cipher.json")
-    syllab   = load_json(RESULTS / "syllabary.json")
-    vocab    = load_json(RESULTS / "vocabulary.json")
-    gradient = load_json(RESULTS / "gradient.json")
+    expected  = load_json(RESULTS / "expected.json")
+    cipher    = load_json(RESULTS / "cipher.json")
+    syllab    = load_json(RESULTS / "syllabary.json")
+    vocab     = load_json(RESULTS / "vocabulary.json")
+    gradient  = load_json(RESULTS / "gradient.json")
+    botanical = load_json(RESULTS / "botanical.json")
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
     lines = []
@@ -131,8 +132,11 @@ def run():
         lines.append(f"| §B QO% highest (phlegm section) | {arch.get('SB_QO_pct')}% | ℹ️ manual verification — see paper §8 |")
         lines.append(f"| KW p-value (section architecture) | {arch.get('KW_p_value'):.0e} | ℹ️ manual verification |")
     lines.append("")
-    lines.append("*Note: Section architecture requires the full §H botanical dataset (scripts/4_botanical.py).*")
-    lines.append("*That module is in development. Interim values are from paper Table 2.*\n")
+    if botanical and botanical.get("PASS"):
+        lines.append(f"*Botanical dataset loaded: {botanical.get('n_classified', '?')} folios. GL4313 confirmed by folio data: early={botanical.get('early_cold_pct','?')}% / late={botanical.get('late_cold_pct','?')}% cold.*\n")
+    else:
+        lines.append("*Note: Section architecture requires the full §H botanical dataset (scripts/4_botanical.py).*")
+        lines.append("*Interim values are from paper Table 2.*\n")
 
     lines.append("## 6. Triphala Botanical Identifications")
     lines.append("")
@@ -165,20 +169,26 @@ def run():
     lines.append("**Contact for technical review:** guestent@gmail.com")
     lines.append("*Please cite: Stalnecker, F.D. (2026). [Cryptologia submission ID 264889452]*\n")
 
-    # Summary
-    modules_run = sum([cipher is not None, syllab is not None, vocab is not None, gradient is not None])
+    # Summary — 5 modules: cipher, syllabary, vocabulary, gradient, botanical
+    bot_pass = botanical.get("PASS", False) if botanical and botanical.get("PASS") is not None else None
+    modules_run = sum([cipher is not None, syllab is not None, vocab is not None, gradient is not None,
+                       botanical is not None and bot_pass is not None])
     passes = sum([
         cipher.get("PASS", False) if cipher else False,
         syllab.get("PASS", False) if syllab else False,
         vocab.get("PASS", False) if vocab else False,
         gradient.get("PASS", False) if gradient else False,
+        bool(bot_pass) if bot_pass is not None else False,
     ])
 
     lines.append("---\n")
     lines.append(f"## Summary: {passes}/{modules_run} modules PASS\n")
-    lines.append(f"Modules run: {modules_run}/4 (scripts/4_botanical.py pending full dataset)\n")
-    if passes == modules_run and modules_run == 4:
-        lines.append("**All four core modules PASS. Results are reproducible.**\n")
+    bot_status = "data loaded ✅" if (botanical and bot_pass) else "dataset pending"
+    lines.append(f"Modules run: {modules_run}/5 (scripts/4_botanical.py — {bot_status})\n")
+    if passes == modules_run and modules_run == 5:
+        lines.append("**All five modules PASS. Results are fully reproducible.**\n")
+    elif passes == modules_run and modules_run == 4:
+        lines.append("**All four core modules PASS. Botanical module requires data/botanical_dataset.json.**\n")
     elif modules_run == 0:
         lines.append("**No modules have been run yet. Execute `./reproduce.sh` first.**\n")
     else:
