@@ -33,8 +33,8 @@ record.
 | 11 | 2026-05-24 | **Section pharmacological architecture (GL4294).** Predicted that the five manuscript sections would show statistically distinct pharmacological profiles under the three-channel model, before cross-section KW analysis. | `(batch3337 pre-reg)` | CONFIRMED. KW p=4×10⁻²⁴; permutation 0/10000 for QO, OT; 4/10000 for CH. | §11, GL4294 |
 | 12 | 2026-05-24 | **Initial-level encoding scope (GL4289).** Predicted that initial character choice (k vs t vs p vs f) encodes the rlung/CH axis in §H and §A but NOT in §B, before quire-level tests. | `(batch3353 pre-reg chain)` | CONFIRMED. §H KW p=0.0021; §A o-initial r=0.726; §B initial-level law falsified (GL4299 — documented as NR-04). | GL4289, GL4297, GL4299 |
 | 13 | 2026-05-24 | **dairal structural-marker hypothesis.** Predicted that the dairal glyph marks architectural boundaries (key/bridge/anchor) rather than pharmacological peaks, *after* pharmacological peak hypothesis was falsified in batch3365. | `(batch3365 follow-up pre-reg)` | CONFIRMED. dairal appears at 5 corpus positions (f57v, f67v1, f86v6, f115v, f66r) all at structural boundaries; 0/4 dairal folios above section pharmacological mean. | §9, GL4057 |
-| 14 | 2026-05-24 | **Saussurea lappa (kuth/ru-rta) for f2r.** Predicted scaly involucral bracts + deeply lobed leaves + branching aromatic root + warm CTH, *after* Allium was pre-registered and falsified for the same folio. | `7b46b55b` | CONFIRMED. 6/6 criteria confirmed (batch3425). | §12 |
-| 15 | 2026-05-24 | **Aconitum ferox (bong-nga) for f9r.** Predicted deeply divided palmate leaves + blue/violet hooded flowers + thick taproot + CTH≈12% (hottest category) before image scoring. | `(batch3449 pre-reg chain)` | CONFIRMED. 6/6 criteria; CTH=11.76%, highest hot-plant CTH in sprint. | §12 |
+| 14 | 2026-05-24 | **Saussurea lappa (kuth/ru-rta) for f2r.** Predicted scaly involucral bracts + deeply lobed leaves + branching aromatic root + warm CTH, *after* Allium was pre-registered and falsified for the same folio. | `7b46b55b` | ~~CONFIRMED batch3425~~ **SUPERSEDED** — see Corrections below. Sprint wave 13 (batch3525) falsified Saussurea and confirmed *Paeonia officinalis* 5/6. Prediction column unchanged; result updated per erratum. | §12 |
+| 15 | 2026-05-24 | **Aconitum ferox (bong-nga) for f9r.** Predicted deeply divided palmate leaves + blue/violet hooded flowers + thick taproot + CTH≈12% (hottest category) before image scoring. | `(batch3449 pre-reg chain)` | ~~CONFIRMED batch3449~~ **SUPERSEDED** — see Corrections below. Sprint wave 11 (batch3516) falsified Aconitum and confirmed *Rheum palmatum* 5/6. Prediction column unchanged; result updated per erratum. | §12 |
 
 ---
 
@@ -67,3 +67,32 @@ explicit methodological decision, recorded in the commit message of that batch, 
 continuously thereafter. The negative results in NEGATIVE_RESULTS.md are a direct product of
 the same protocol: when a pre-registered prediction failed, it was recorded as a failure —
 not quietly dropped.
+
+---
+
+## Corrections
+
+This section records post-publication corrections to the Result column of the table above.
+Prediction columns are immutable. The cryptographic pre-registration chain in THEOS2 is intact
+and unmodified. These corrections update the *result* fields only, to reflect the final
+epistemic state after later sprint waves revised earlier identifications.
+
+**2026-05-26 — Entries 14 and 15:**
+
+Original Result entries in voynich-evidence init commit `06ad82c` reported CONFIRMED for:
+- Entry 14: f2r = *Saussurea lappa* (batch3425, 6/6)
+- Entry 15: f9r = *Aconitum ferox* (batch3449, 6/6)
+
+Both were subsequently falsified by later sprint waves using a corrected IIIF OID formula
+(physical folio indexing error in early batches caused the wrong Beinecke image to be scored):
+- Entry 14 superseded: f2r = *Paeonia officinalis* confirmed 5/6, wave 13 (batch3525, THEOS2
+  commit chain traceable via `git log --grep="batch3525"`)
+- Entry 15 superseded: f9r = *Rheum palmatum* confirmed 5/6, wave 11 (batch3516, THEOS2
+  commit chain traceable via `git log --grep="batch3516"`)
+
+The Prediction columns for entries 14 and 15 are unchanged. The pre-registered predictions
+(Saussurea lappa and Aconitum ferox) were honest at the time of registration. The later
+falsification and re-confirmation is itself part of the pre-registration record in THEOS2 —
+each wave's revised hypothesis was committed before re-scoring. This is the full epistemic
+trajectory: predict → test → falsify → re-predict → confirm. The immutable THEOS2 chain
+carries cryptographic priority for all stages.

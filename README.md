@@ -67,7 +67,7 @@ These results are independent: the gradient holds whether or not the cipher is c
 | R=14 cipher, p<10⁻¹² (§4) | `scripts/1_cipher.py` |
 | Syllabary 19/23 T1-confirmed (§5) | `scripts/2_syllabary.py` |
 | 11 vocabulary items + section distributions (§6) | `scripts/3_vocabulary.py` |
-| 113-plant botanical classification (§7) | `scripts/4_botanical.py` *(dataset pending)* |
+| 113-plant botanical classification (§7) | `scripts/4_botanical.py` |
 | GL4313 pharmacological gradient (§8) | `scripts/5_gradient.py` |
 | Full report with pass/fail per claim | `scripts/verify_report.py` |
 
@@ -140,7 +140,7 @@ reflect an earlier corpus version. Both discrepancies are documented in `NEGATIV
 ## Known Limitations
 
 - 5 of 23 phonological units remain unmapped (j, u, v, x, z — together <3% of corpus characters)
-- `scripts/4_botanical.py` requires the full 113-plant dataset, not yet released in this repository
+- `scripts/4_botanical.py` requires `data/botanical_dataset.json` — included in this repository (113 confirmed plants, batch3597)
 - The three-column decoded folio pages (f67r1, f70r2, f68v3, f70r1) are available in the companion `ASTROMEDICA-Book` repository
 
 ---

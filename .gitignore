@@ -1,0 +1,8 @@
+# Third-party corpus file — download from https://www.voynich.nu/data/ZL3b-n.txt
+data/ZL3b-n.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store

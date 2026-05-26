@@ -1,0 +1,10 @@
+{
+  "n_classified": 109,
+  "n_confirmed": 109,
+  "n_cold_CTH0": 20,
+  "triphala_confirmed": true,
+  "thermal_gradient_ok": true,
+  "early_cold_pct": 6.6,
+  "late_cold_pct": 33.3,
+  "PASS": true
+}
