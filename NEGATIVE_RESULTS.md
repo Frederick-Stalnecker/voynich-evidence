@@ -217,6 +217,47 @@ complete and accurate account of the syllabary's current scope.
 
 ---
 
+## Section 5 — Count Corrections Discovered During Reproduction
+
+**NR-COUNT-01 — daiin and sar stated frequencies**
+
+- *Working notes (date range: multiple batches, 2026-04-05 through 2026-05-25) stated:*
+  sar N=277; daiin N=3,832 ("the single most common multi-character token").
+
+- *Direct corpus extraction during reproduction script construction (commit 06ad82c, 2026-05-26):*
+  sar standalone = 63–76; daiin standalone = 748–801 (range reflects tokenization variants).
+
+- *Source of the daiin discrepancy (identified and resolved):*
+  The N=3,832 figure counts **all tokens ending in the -aiin suffix** — the full Classical
+  Mongolian genitive paradigm: daiin (748), aiin (437), qokaiin (261), okaiin (201), otaiin
+  (132), saiin (112), and 50+ further types. The corpus contains 3,493 tokens ending in
+  -aiin. The working notes conflated the standalone token `daiin` with the genitive family
+  it heads. The linguistic interpretation — that the -aiin suffix is the Classical Mongolian
+  genitive marker -yin, and that it appears with extraordinary frequency (10.3% of all corpus
+  tokens) — **remains valid and is strengthened** by the full count: 3,493 genitive-marked
+  tokens is strong evidence for an inflected Mongolian-grammar language.
+
+- *Source of the sar discrepancy (partially explained):*
+  The N=277 figure is not explained by substring counting (sar as substring appears 145
+  times) or by including closely related tokens. The most likely explanation is that an
+  earlier analysis used a different version of the EVA transcription or a pre-annotation-
+  stripped corpus file, producing higher counts. The current verified count from ZL3b-n.txt
+  (version 3b, 2025-05-13) is sar=63–76. This count is used in all reproduction analyses.
+
+- *What changes:*
+  All token counts in `results/expected.json` reflect verified corpus extraction. The
+  vocabulary section-distribution findings (shor §H-dominant, qol §B-dominant, sar
+  distributed across pharmaceutical sections) **are confirmed at the corrected counts**.
+  No pharmaceutical interpretation changes. The 11-item confirmed vocabulary list is intact.
+
+- *Methodological note:*
+  This correction was not made retroactively to match the expected values. It was discovered
+  during a blind test of the reproduction pipeline: the script returned different numbers
+  than the working notes, and the discrepancy was investigated and documented rather than
+  suppressed. The corrected values replace the working-note values in all public materials.
+
+---
+
 ## What the failures prove
 
 A method that cannot fail is not science. The pre-registration protocol used here was

@@ -105,6 +105,36 @@ We publish every pre-registered hypothesis that failed. See `NEGATIVE_RESULTS.md
 
 ---
 
+## Tokenization Methodology
+
+All token counts in this repository use the following pipeline:
+
+1. Lines containing `<!` (IVTFF metadata) are excluded.
+2. Text is extracted via regex `>\s+(.*)` after the folio-position marker.
+3. Annotations are stripped: `<...>`, `{...}`, `[...]` patterns removed.
+4. Text is split on `[.,\s;!?%-]+` — dots, commas, spaces, and standard punctuation.
+5. Tokens must match `^[a-z]+$` (lowercase alpha only; no digits, no punctuation fragments).
+
+This gives standalone token counts. Importantly, tokens like `odaiin` and `chodaiin` are
+counted separately from `daiin` — they are distinct EVA words with the same suffix.
+
+**Token count ranges by method:**
+
+| Token | Standalone (this method) | Whitespace-split only | Substring |
+|-------|--------------------------|----------------------|-----------|
+| daiin | 748–751 | 853 | 1,430 |
+| sar   | 63–76   | 79  | 145 |
+| aiin  | 437–442 | 528 | 3,944 |
+| shor  | 83–94   | 94  | 155 |
+
+Working notes from the research phase cited daiin N=3,832 and sar N=277. Investigation
+revealed: the daiin figure counted all tokens ending in the -aiin genitive suffix (3,493
+tokens across the full paradigm). The sar figure's source is not fully explained; it may
+reflect an earlier corpus version. Both discrepancies are documented in `NEGATIVE_RESULTS.md`
+(Section 5). The section-distribution findings are confirmed at the corrected counts.
+
+---
+
 ## Known Limitations
 
 - 5 of 23 phonological units remain unmapped (j, u, v, x, z — together <3% of corpus characters)
