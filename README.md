@@ -2,7 +2,7 @@
 
 This repository contains the reproducible statistical evidence for the claim that the Voynich Manuscript (Beinecke MS 408, Yale University) encodes a pharmaceutical text in a hybrid Classical Mongolian / Tibetan Sowa Rigpa register, encrypted by a rotational substitution cipher calibrated at R=14.
 
-**Published paper:** Stalnecker, F.D. (2026). *Cryptologia*, submission ID 264889452, decision pending.
+Manuscript under review at *Cryptologia* (2026). arXiv preprint forthcoming.
 
 ---
 
@@ -144,7 +144,7 @@ reflect an earlier corpus version. Both discrepancies are documented in `NEGATIV
 - 5 of 23 phonological units remain unmapped (j, u, v, x, z — together <3% of corpus characters)
 - `scripts/4_botanical.py` requires `data/botanical_dataset.json` — included in this repository (113 confirmed plants, batch3597)
 - Two early botanical identifications (f2r, f9r) were falsified by later sprint waves and re-confirmed with different species. See [Corrections](PRE_REGISTRATIONS.md#corrections) in PRE_REGISTRATIONS.md for the full erratum and the THEOS2 commit chain.
-- The three-column decoded folio pages (f67r1, f70r2, f68v3, f70r1) are available in the companion `ASTROMEDICA-Book` repository
+- The three-column decoded folio pages (f67r1, f70r2, f68v3, f70r1) are part of a forthcoming companion publication and are not included in this repository
 
 ---
 
