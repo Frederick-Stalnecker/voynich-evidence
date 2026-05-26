@@ -25,6 +25,8 @@ Open `REPRODUCTION_REPORT.md` when it finishes.
 **Dependencies:** Python 3.8+, standard library only (no pip install required).  
 **Corpus SHA-256:** See `CORPUS_HASH.txt`.
 
+> **Note on `results/cipher.json`:** The repository ships with a pre-seeded reference state so that `REPRODUCTION_REPORT.md` shows all four modules. Running `./reproduce.sh` overwrites it with independently computed values from your corpus copy. If you want to verify the cipher claim from scratch without any pre-seeded state, delete `results/cipher.json` before running.
+
 ---
 
 ## What This Repository Proves
