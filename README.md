@@ -36,7 +36,7 @@ Five independent statistical results, each pre-registered before testing:
 | §H organized as pharmacological gradient | Spearman r_s=0.850 | p=0.0075 (8 quires) |
 | Three-humor section architecture | Kruskal-Wallis | p=4×10⁻²⁴ |
 
-These results are independent: the gradient holds whether or not the cipher is correct; the vocabulary section distributions hold whether or not the pharmaceutical interpretation is correct; the cipher sweep holds whether or not the language identification is correct.
+These results are independent: the gradient holds whether or not the cipher is correct; the vocabulary section distributions hold whether or not the pharmaceutical interpretation is correct; the cipher result holds whether or not the language identification is correct.
 
 ---
 
