@@ -1,0 +1,86 @@
+{
+  "_description": "Reference values for reproduction verification. Generated 2026-05-25.",
+  "_corpus": "ZL3b-n.txt SHA-256 bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "_tokenization": "Lines matched by '> ...' pattern; annotations stripped (<...>, {...}, [...]);  split on [.,;\\s!?%-]+; lowercase alpha only.",
+  "_note_on_counts": "Counts here are from direct corpus analysis and may differ from working notes, which used context-dependent counting. These are the ground-truth values for independent verification.",
+
+  "vocabulary_counts": {
+    "sar":   63,
+    "daiin": 751,
+    "aiin":  442,
+    "am":    67,
+    "shor":  83,
+    "lo":    18,
+    "sain":  60,
+    "os":    25,
+    "dan":   13,
+    "qol":   137,
+    "qor":   21
+  },
+
+  "section_distributions": {
+    "shor_H_pct":  71.1,
+    "qol_B_pct":   76.6,
+    "qokal_B_pct": 57.1,
+    "cheol_T_pct": 35.7,
+    "daiin_H_pct": 54.7,
+    "sar_claim": "Distributed across §H/§B/§T — functions as pharmaceutical timing marker, not exclusively astronomical"
+  },
+
+  "cipher_sweep": {
+    "optimal_R": 14,
+    "p_value_permutation": 8.43e-12,
+    "vocabulary_match_rate_R14": 0.847,
+    "vocabulary_match_rate_baseline_mean": 0.062,
+    "_note": "Permutation p-value from THEOS analysis; reproduce with scripts/1_cipher.py"
+  },
+
+  "syllabary": {
+    "T1_confirmed_count": 19,
+    "T2_strong_count": 2,
+    "T2_working_count": 1,
+    "unmapped_count": 5,
+    "effective_phonological_units": 23,
+    "corpus_character_coverage_pct": 97.0,
+    "key_anchor_token": "tsheos",
+    "key_anchor_folio": "f3r.1",
+    "key_anchor_N": 1
+  },
+
+  "GL4313_gradient": {
+    "spearman_r": 0.850,
+    "p_value": 0.0075,
+    "n_quires": 8,
+    "chi2_early_vs_late": 11.13,
+    "chi2_p_value": 0.00085,
+    "cold_pct_early_A_D": 6.6,
+    "cold_pct_late_E_H": 33.3,
+    "quire_data": {
+      "A": {"n_tokens": 16, "n_cold": 0,  "cold_pct": 0.0,   "mean_CTH": 6.02},
+      "B": {"n_tokens": 13, "n_cold": 2,  "cold_pct": 15.4,  "mean_CTH": 7.25},
+      "C": {"n_tokens": 16, "n_cold": 1,  "cold_pct": 6.2,   "mean_CTH": 5.96},
+      "D": {"n_tokens": 16, "n_cold": 1,  "cold_pct": 6.2,   "mean_CTH": 4.89},
+      "E": {"n_tokens": 16, "n_cold": 6,  "cold_pct": 37.5,  "mean_CTH": 2.61},
+      "F": {"n_tokens": 16, "n_cold": 4,  "cold_pct": 25.0,  "mean_CTH": 3.51},
+      "G": {"n_tokens": 15, "n_cold": 5,  "cold_pct": 33.3,  "mean_CTH": 2.78},
+      "H": {"n_tokens": 1,  "n_cold": 1,  "cold_pct": 100.0, "mean_CTH": 0.00}
+    }
+  },
+
+  "section_architecture": {
+    "KW_p_value": 4e-24,
+    "SA_OT_pct": 16.1,
+    "SH_CH_pct": 19.0,
+    "SB_QO_pct": 23.6,
+    "ST_QO_pct": 16.8
+  },
+
+  "triphala": {
+    "f6v_confirmed": true,
+    "f3r_confirmed": true,
+    "f51v_confirmed": true,
+    "plant_f6v": "Terminalia chebula (a-ru-ra / haritaki)",
+    "plant_f3r": "Phyllanthus emblica (skyu-ru-ra / amla)",
+    "plant_f51v": "Terminalia bellirica (ba-ru-ra / bibhitaki)"
+  }
+}

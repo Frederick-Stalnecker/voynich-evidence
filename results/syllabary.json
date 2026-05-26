@@ -1,0 +1,35 @@
+{
+  "T1_confirmed": 19,
+  "T2_strong": 1,
+  "marginal": 5,
+  "effective_units": 23,
+  "corpus_coverage_pct": 97.0,
+  "anchor_tests": [
+    {
+      "token": "tsheos",
+      "N": 1,
+      "phoneme": "/e/",
+      "criterion_4_pass": true
+    },
+    {
+      "token": "sar",
+      "N": 277,
+      "phoneme": "/sar/",
+      "criterion_4_pass": true
+    },
+    {
+      "token": "daiin",
+      "N": 3832,
+      "phoneme": "/dayin/",
+      "criterion_4_pass": true
+    },
+    {
+      "token": "pchedar",
+      "N": 11,
+      "phoneme": "/phedar/",
+      "criterion_4_pass": true
+    }
+  ],
+  "all_anchors_pass": true,
+  "PASS": true
+}

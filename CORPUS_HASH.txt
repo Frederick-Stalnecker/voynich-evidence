@@ -1,0 +1,12 @@
+SHA-256 of ZL3b-n.txt (Zandbergen-Landini transcription, version 3b, dated 13/05/2025)
+bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+
+Source: René Zandbergen, voynich.nu, IVTFF format version 2.0 M 5
+Retrieved: 2026-05-25
+
+Reproduction scripts verify this hash before running.
+If your hash differs, you are using a different transcription version.
+All stated token counts (sar N=277, daiin N=3832, etc.) apply to this exact corpus.
+
+The ZL3b-n.txt corpus is available at:
+  https://www.voynich.nu/data/ZL3b-n.txt
