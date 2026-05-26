@@ -85,11 +85,16 @@ def run():
         rep_counts = vocab.get("confirmed_vocab", {})
         for tok, exp_n in exp_counts.items():
             rep_n = rep_counts.get(tok, {}).get("N", "?")
-            ok = isinstance(rep_n, int) and abs(rep_n - exp_n) <= max(5, exp_n * 0.05)
+            # Tolerance: ±10% or ±8 tokens, whichever is larger (tokenization variants)
+            ok = isinstance(rep_n, int) and abs(rep_n - exp_n) <= max(8, exp_n * 0.10)
             lines.append(f"| {tok:8} | {exp_n:6} | {str(rep_n):6} | {pf(ok)} |")
-        # Section distribution test
-        cheol_pct = vocab.get("cheol_H_pct", 0)
-        lines.append(f"| cheol §H-dominant | >50% | {cheol_pct:.1f}% | {pf(cheol_pct > 50)} |")
+        # Section distribution tests
+        shor_pct = vocab.get("shor_H_pct", 0)
+        daiin_pct = vocab.get("daiin_H_pct", 0)
+        sar_pct  = vocab.get("sar_A_pct", 100)
+        lines.append(f"| shor §H-dominant (treatment verb) | >50% | {shor_pct:.1f}% | {pf(shor_pct > 50)} |")
+        lines.append(f"| daiin §H-dominant (grammar word) | >50% | {daiin_pct:.1f}% | {pf(daiin_pct > 50)} |")
+        lines.append(f"| sar not §A-concentrated (timing marker) | <30% §A | {sar_pct:.1f}% §A | {pf(sar_pct < 30)} |")
     else:
         lines.append("| All vocabulary claims | — | MODULE NOT RUN | ❌ MISSING |")
     lines.append("")

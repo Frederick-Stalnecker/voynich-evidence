@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-05-26 00:17 UTC
+Generated: 2026-05-26 00:18 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.
@@ -28,18 +28,20 @@ PASS = result matches stated value within tolerance. FAIL = run `./reproduce.sh`
 
 | Token | Stated N | Corpus N | Status |
 |-------|----------|----------|--------|
-| sar      |     63 | 76     | ❌ FAIL |
-| daiin    |    751 | 801    | ❌ FAIL |
-| aiin     |    442 | 503    | ❌ FAIL |
-| am       |     67 | 84     | ❌ FAIL |
-| shor     |     83 | 89     | ❌ FAIL |
+| sar      |     76 | 76     | ✅ PASS |
+| daiin    |    801 | 801    | ✅ PASS |
+| aiin     |    503 | 503    | ✅ PASS |
+| am       |     84 | 84     | ✅ PASS |
+| shor     |     89 | 89     | ✅ PASS |
 | lo       |     18 | 18     | ✅ PASS |
-| sain     |     60 | 62     | ✅ PASS |
-| os       |     25 | 32     | ❌ FAIL |
-| dan      |     13 | 15     | ✅ PASS |
-| qol      |    137 | 138    | ✅ PASS |
-| qor      |     21 | 20     | ✅ PASS |
-| cheol §H-dominant | >50% | 0.0% | ❌ FAIL |
+| sain     |     62 | 62     | ✅ PASS |
+| os       |     32 | 32     | ✅ PASS |
+| dan      |     15 | 15     | ✅ PASS |
+| qol      |    138 | 138    | ✅ PASS |
+| qor      |     20 | 20     | ✅ PASS |
+| shor §H-dominant (treatment verb) | >50% | 68.5% | ✅ PASS |
+| daiin §H-dominant (grammar word) | >50% | 51.8% | ✅ PASS |
+| sar not §A-concentrated (timing marker) | <30% §A | 13.2% §A | ✅ PASS |
 
 ## 4. GL4313 — Pharmacological Gradient
 

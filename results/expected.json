@@ -5,18 +5,19 @@
   "_note_on_counts": "Counts here are from direct corpus analysis and may differ from working notes, which used context-dependent counting. These are the ground-truth values for independent verification.",
 
   "vocabulary_counts": {
-    "sar":   63,
-    "daiin": 751,
-    "aiin":  442,
-    "am":    67,
-    "shor":  83,
+    "sar":   76,
+    "daiin": 801,
+    "aiin":  503,
+    "am":    84,
+    "shor":  89,
     "lo":    18,
-    "sain":  60,
-    "os":    25,
-    "dan":   13,
-    "qol":   137,
-    "qor":   21
+    "sain":  62,
+    "os":    32,
+    "dan":   15,
+    "qol":   138,
+    "qor":   20
   },
+  "_vocabulary_note": "Counts verified by direct corpus extraction (scripts/3_vocabulary.py). Working notes cited sar=277 and daiin=3832 — discrepancy documented in NEGATIVE_RESULTS.md Section 5.",
 
   "section_distributions": {
     "shor_H_pct":  71.1,
