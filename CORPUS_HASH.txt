@@ -6,7 +6,9 @@ Retrieved: 2026-05-25
 
 Reproduction scripts verify this hash before running.
 If your hash differs, you are using a different transcription version.
-All stated token counts (sar N=277, daiin N=3832, etc.) apply to this exact corpus.
+Token counts for confirmed vocabulary are documented in results/expected.json and verified
+by reproduction scripts. See NEGATIVE_RESULTS.md Section 5 for the count correction
+discovered during reproduction.
 
 The ZL3b-n.txt corpus is available at:
   https://www.voynich.nu/data/ZL3b-n.txt

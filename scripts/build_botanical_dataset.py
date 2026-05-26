@@ -3,24 +3,29 @@
 One-time utility: parse §H botanical master summary → data/botanical_dataset.json
 Run from voynich-evidence root: python scripts/build_botanical_dataset.py
 """
-import json, re
+import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 OUT = ROOT / "data" / "botanical_dataset.json"
 
-MASTER = Path("/Users/mbp/THEOS2/experiments/sh_botanical_master_summary_2026-05-25.md")
+if len(sys.argv) < 2:
+    print("Usage: python scripts/build_botanical_dataset.py <path/to/sh_botanical_master_summary.md>")
+    print("This is a one-time utility used to generate data/botanical_dataset.json.")
+    print("The generated file is included in this repository — you do not need to re-run this.")
+    sys.exit(1)
+MASTER = Path(sys.argv[1])
 
 # Parse the table rows
 QUIRE_MAP = {
-    "A": list(range(1, 9)),
-    "B": list(range(9, 18)),
-    "C": list(range(17, 25)),
-    "D": list(range(25, 34)),
-    "E": list(range(33, 41)),
-    "F": list(range(40, 50)),
-    "G": list(range(49, 58)),
-    "H": list(range(58, 67)),
+    "A": list(range(1, 9)),    # folios 1–8
+    "B": list(range(9, 18)),   # folios 9–17
+    "C": list(range(18, 25)),  # folios 18–24
+    "D": list(range(25, 34)),  # folios 25–33
+    "E": list(range(34, 41)),  # folios 34–40
+    "F": list(range(41, 50)),  # folios 41–49
+    "G": list(range(50, 58)),  # folios 50–57
+    "H": list(range(58, 67)),  # folios 58–66
 }
 
 def parse_table(text):

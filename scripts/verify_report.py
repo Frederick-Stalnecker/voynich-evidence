@@ -167,7 +167,7 @@ def run():
     lines.append("See `scripts/2_syllabary.py` — each anchor's 'no alternative reading'")
     lines.append("test lists every phoneme substitution that was tried and rejected.\n")
     lines.append("**Contact for technical review:** guestent@gmail.com")
-    lines.append("*Please cite: Stalnecker, F.D. (2026). [Cryptologia submission ID 264889452]*\n")
+    lines.append("*Please cite: Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository. GitHub. https://github.com/Frederick-Stalnecker/voynich-evidence. Manuscript in review at Cryptologia (2026).*\n")
 
     # Summary — 5 modules: cipher, syllabary, vocabulary, gradient, botanical
     bot_pass = botanical.get("PASS", False) if botanical and botanical.get("PASS") is not None else None

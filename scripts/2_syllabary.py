@@ -84,8 +84,8 @@ ANCHOR_TESTS = [
     },
     {
         "token": "sar",
-        "folio": "§H and §A (N=277)",
-        "N": 277,
+        "folio": "§H and §A (N=76)",
+        "N": 76,
         "constrained_chars": [],
         "unconstrained_char": None,
         "proposed_phoneme": "/sar/",
@@ -97,8 +97,8 @@ ANCHOR_TESTS = [
     },
     {
         "token": "daiin",
-        "folio": "corpus-wide (N=3832)",
-        "N": 3832,
+        "folio": "corpus-wide (N=801)",
+        "N": 801,
         "constrained_chars": ["d", "a", "i", "i"],
         "unconstrained_char": "n",
         "proposed_phoneme": "/dayin/",

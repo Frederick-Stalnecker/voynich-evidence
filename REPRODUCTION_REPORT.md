@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-05-26 00:41 UTC
+Generated: 2026-05-26 16:12 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.
@@ -100,7 +100,7 @@ See `scripts/2_syllabary.py` — each anchor's 'no alternative reading'
 test lists every phoneme substitution that was tried and rejected.
 
 **Contact for technical review:** guestent@gmail.com
-*Please cite: Stalnecker, F.D. (2026). [Cryptologia submission ID 264889452]*
+*Please cite: Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository. GitHub. https://github.com/Frederick-Stalnecker/voynich-evidence. Manuscript in review at Cryptologia (2026).*
 
 ---
 

@@ -29,7 +29,7 @@ EXPECTED_HASH="bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
 
 echo "============================================================"
 echo "  Voynich Decipherment — Reproduction Pipeline"
-echo "  https://github.com/[repo-to-be-announced]"
+echo "  https://github.com/Frederick-Stalnecker/voynich-evidence"
 echo "  Estimated runtime: 3–8 minutes"
 echo "============================================================"
 echo ""
