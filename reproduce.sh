@@ -39,10 +39,12 @@ echo "[0/5] Verifying corpus..."
 if [ ! -f "$CORPUS" ]; then
     echo "ERROR: Corpus not found at $CORPUS"
     echo ""
-    echo "Download the ZL3b-n.txt Voynich EVA corpus:"
-    echo "  curl -o data/ZL3b-n.txt https://www.voynich.nu/data/ZL3b-n.txt"
+    echo "The corpus ships with this repository. If it is missing, re-clone:"
+    echo "  git clone https://github.com/Frederick-Stalnecker/voynich-evidence.git"
     echo ""
-    echo "Expected SHA-256: $EXPECTED_HASH"
+    echo "Or download the corpus directly from the original source:"
+    echo "  curl -o data/ZL3b-n.txt https://www.voynich.nu/data/ZL3b-n.txt"
+    echo "  Expected SHA-256: $EXPECTED_HASH"
     exit 1
 fi
 

@@ -9,13 +9,8 @@ Manuscript under review at *Cryptologia* (2026). arXiv preprint forthcoming.
 ## Reproduce in One Command
 
 ```bash
-git clone [this-repo]
+git clone https://github.com/Frederick-Stalnecker/voynich-evidence.git
 cd voynich-evidence
-
-# Place the corpus file in data/
-curl -o data/ZL3b-n.txt https://www.voynich.nu/data/ZL3b-n.txt
-
-# Run the full pipeline (~5 minutes)
 ./reproduce.sh
 ```
 
@@ -23,7 +18,7 @@ Open `REPRODUCTION_REPORT.md` when it finishes.
 
 **Expected runtime:** 3–8 minutes on a standard laptop.  
 **Dependencies:** Python 3.8+, standard library only (no pip install required).  
-**Corpus SHA-256:** See `CORPUS_HASH.txt`.
+**Corpus:** `data/ZL3b-n.txt` ships with the repository (Zandbergen-Landini EVA transcription, version 3b). SHA-256 verified by `reproduce.sh` on every run — see `CORPUS_HASH.txt`.
 
 > **Note on `results/cipher.json`:** The repository ships with a pre-seeded reference state so that `REPRODUCTION_REPORT.md` shows all four modules. Running `./reproduce.sh` overwrites it with independently computed values from your corpus copy. If you want to verify the cipher claim from scratch without any pre-seeded state, delete `results/cipher.json` before running.
 

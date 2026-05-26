@@ -1,5 +1,6 @@
-# Third-party corpus file — download from https://www.voynich.nu/data/ZL3b-n.txt
-data/ZL3b-n.txt
+# data/ZL3b-n.txt is committed to this repository (Zandbergen-Landini EVA
+# transcription, version 3b). It is not listed here; reproduce.sh verifies
+# its SHA-256 on every run. Source: https://www.voynich.nu/data/ZL3b-n.txt
 
 # Python cache
 __pycache__/
