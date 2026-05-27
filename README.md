@@ -33,7 +33,7 @@ Five independent statistical results, each pre-registered before testing:
 | R=14 is the cipher calibration parameter | Crib convergence (9 class-marker cribs) | p = (1/17)⁹ < 10⁻¹¹ |
 | Syllabary: 19/23 characters T1-confirmed | Anchor chain analysis | No alternative reading works |
 | Pharmaceutical vocabulary section-consistent | Chi-square, section distribution | shor §H=68.5%; qol §B=76.6% |
-| §H organized as pharmacological gradient | Spearman r_s=0.850 | p=0.0075 (8 quires) |
+| §H organized as pharmacological gradient | Spearman r_s=0.850 | p=0.0371 (8 quires; see REPRODUCTION_REPORT §4 note) |
 | Three-humor section architecture | Kruskal-Wallis | p=4×10⁻²⁴ |
 
 These results are independent: the gradient holds whether or not the cipher is correct; the vocabulary section distributions hold whether or not the pharmaceutical interpretation is correct; the cipher result holds whether or not the language identification is correct.
@@ -46,7 +46,7 @@ These results are independent: the gradient holds whether or not the cipher is c
 |------|---------|
 | EVA | Extended Voynich Alphabet — the standard transliteration of Voynich characters |
 | R=14 | Rotation value (cipher calibration parameter) for the f57v volvelle wheel |
-| §H, §A, §B, §C, §P, §T | Manuscript sections: Herbal, Astronomical, Phlegm, Cosmological, Pharmaceutical, Clinical Text |
+| §H, §A, §B, §C, §P, §T | Manuscript sections: Herbal, Astronomical, Balneological-Pharmaceutical, Cosmological, Pharmaceutical, Clinical Text. *These labels are this paper's nomenclature:* §H = Herbal (ff.1r–66r), §A = Astronomical/Astrological (ff.67r–73v), §B = Balneological-biological equivalent (ff.75r–84v), §C = Cosmological (the nine-rosette section), §P = Pharmaceutical (ff.88r–102v), §T = Clinical text/Recipes (ff.103r onward). The single-letter codes reflect the pharmacological role each section plays in the decipherment model (e.g. §B = phlegm-dominant register). Note: the Currier A/B division (two scribal hands) is a separate classification system; these section labels do not correspond to Currier-A and Currier-B. |
 | CTH | Warmth-class token percentage — pharmacological warmth classification metric |
 | CH | Wind-humor (rlung) token percentage |
 | QO | Phlegm-humor (bad-kan) token percentage |
@@ -73,11 +73,11 @@ These results are independent: the gradient holds whether or not the cipher is c
 ## How to Challenge Specific Claims
 
 **To test R=14 against every other rotation value:**
+
+`results/cipher.json` will contain crib satisfaction rates for R=0 through R=16 (the f57v volvelle has 17 inner-ring positions; wheel space is R=0..16). R=14 uniquely satisfies all 9 class-marker cribs; p=(1/17)⁹=8.43×10⁻¹².
+
 ```bash
 python scripts/1_cipher.py
-# results/cipher.json contains crib satisfaction rates for R=0 through R=16
-# (f57v volvelle has 17 inner-ring positions; wheel space is R=0..16)
-# R=14 uniquely satisfies all 9 class-marker cribs; p=(1/17)^9=8.43e-12
 ```
 
 **On the provenance of the 9 cribs (cherry-picking defense):**
@@ -148,7 +148,7 @@ reflect an earlier corpus version. Both discrepancies are documented in `NEGATIV
 
 ## Known Limitations
 
-- 5 of 23 phonological units remain unmapped (j, u, v, x, z — together <3% of corpus characters)
+- 5 of 23 phonological units remain unmapped (`j`, `u`, `v`, `x`, `z` — together <3% of corpus characters)
 - `scripts/4_botanical.py` requires `data/botanical_dataset.json` — included in this repository (113 confirmed plants, batch3597)
 - Two early botanical identifications (f2r, f9r) were falsified by later sprint waves and re-confirmed with different species. See [Corrections](PRE_REGISTRATIONS.md#corrections) in PRE_REGISTRATIONS.md for the full erratum and the THEOS2 commit chain.
 - The three-column decoded folio pages (f67r1, f70r2, f68v3, f70r1) are part of a forthcoming companion publication and are not included in this repository

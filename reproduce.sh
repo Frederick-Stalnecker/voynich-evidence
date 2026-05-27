@@ -10,7 +10,6 @@
 #   modules against the ZL3b-n.txt Voynich EVA corpus, and writes
 #   REPRODUCTION_REPORT.md summarizing which claims pass and which fail.
 #
-# Expected runtime: 3–8 minutes on a standard laptop (permutation test N=10,000)
 # Python version: 3.8+
 # External dependencies: none (uses only stdlib)
 #

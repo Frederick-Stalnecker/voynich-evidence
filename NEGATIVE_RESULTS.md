@@ -17,14 +17,14 @@ and the methodological limitations that remain open.
 
 ## Section 1 — Falsified Hypotheses (pre-registered, did not confirm)
 
-**NR-01 — chedy section profile (H-e2)**
-- *Prediction:* chedy (N=498, one of the highest-frequency EVA tokens) would be §H-dominant,
+**NR-01 — `chedy` section profile (H-e2)**
+- *Prediction:* `chedy` (N=498, one of the highest-frequency EVA tokens) would be §H-dominant,
   with ≥60% of occurrences in the herbal section, consistent with a pharmaceutical ingredient
   marker.
-- *Result:* FALSIFIED. chedy is only 11% §H. It is strongly §B+§T dominant, consistent with
+- *Result:* FALSIFIED. `chedy` is only 11% §H. It is strongly §B+§T dominant, consistent with
   a formula-connector or syntactic linker function, not an ingredient. The herbal-dominance
   criterion fails by a factor of five.
-- *Disposition:* chedy reclassified as a structural connector. The §H-exclusivity criterion
+- *Disposition:* `chedy` reclassified as a structural connector. The §H-exclusivity criterion
   for ingredient status was retained and applied correctly to subsequent candidates.
 
 **NR-02 — H5-1: §A encodes astronomical positions**
@@ -52,11 +52,11 @@ and the methodological limitations that remain open.
 - *Disposition:* R=14 universality strengthened by the failure of the §A-specific prediction.
   Pre-reg commit: `f4a4b59` (2026-05-22, before confirmatory sweep ran).
 
-**NR-04 — GL4299: §B p-initial predicts highest QO**
+**NR-04 — GL4299: §B `p`-initial predicts highest QO**
 - *Prediction:* In §B (the pharmaceutical section with the highest overall phlegm/bad-kan
-  signal), p-initial tokens would show the highest QO values among initials — extending the
-  p-initial = intensity modulator law confirmed in §H and §A.
-- *Result:* FALSIFIED. p-initial tokens in §B show QO=22.5%, the *lowest* initial group in
+  signal), `p`-initial tokens would show the highest QO values among initials — extending the
+  `p`-initial = intensity modulator law confirmed in §H and §A.
+- *Result:* FALSIFIED. `p`-initial tokens in §B show QO=22.5%, the *lowest* initial group in
   §B (not the highest). QO in §B is statistically uniform across all initials (KW p not
   significant). The bad-kan signal in §B is section-level, not initial-modulated.
 - *Disposition:* GL4299 formally falsified (batch3352). The initial-encoding law is now
@@ -228,9 +228,9 @@ complete and accurate account of the syllabary's current scope.
   sar standalone = 63–76; daiin standalone = 748–801 (range reflects tokenization variants).
 
 - *Source of the daiin discrepancy (identified and resolved):*
-  The N=3,832 figure counts **all tokens ending in the -aiin suffix** — the full Classical
-  Mongolian genitive paradigm: daiin (748), aiin (437), qokaiin (261), okaiin (201), otaiin
-  (132), saiin (112), and 50+ further types. The corpus contains 3,493 tokens ending in
+  The N=3,832 figure counts **all tokens ending in the `-aiin` suffix** — the full Classical
+  Mongolian genitive paradigm: `daiin` (748), `aiin` (437), `qokaiin` (261), `okaiin` (201), `otaiin`
+  (132), `saiin` (112), and 50+ further types. The corpus contains 3,493 tokens ending in
   -aiin. The working notes conflated the standalone token `daiin` with the genitive family
   it heads. The linguistic interpretation — that the -aiin suffix is the Classical Mongolian
   genitive marker -yin, and that it appears with extraordinary frequency (10.3% of all corpus

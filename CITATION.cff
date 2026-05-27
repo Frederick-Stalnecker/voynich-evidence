@@ -30,10 +30,10 @@ references:
     authors:
       - family-names: Stalnecker
         given-names: Frederick Davis
-    title: "Manuscript in review at Cryptologia (2026)"
+    title: "Voynich Manuscript Decipherment: Statistical Evidence for a Mongolian-Tibetan Pharmaceutical Register Encrypted at Rotation R=14"
     journal: Cryptologia
     year: 2026
-    notes: "Title and volume/page details will be updated upon publication."
+    notes: "Manuscript in review at Cryptologia (2026). Title and volume/page details will be updated upon publication."
   - type: dataset
     authors:
       - family-names: Zandbergen
