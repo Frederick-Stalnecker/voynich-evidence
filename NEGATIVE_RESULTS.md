@@ -281,6 +281,28 @@ complete and accurate account of the syllabary's current scope.
 - *Disposition:* NR-08 recorded as a genuine pre-registered negative result. GL4318 paper
   section (§764) drafted; on hold until Cryptologia decision (~June 3, 2026).
 
+**NR-09 — GL4330: Terminal zodiac clock variance lower than early zodiac (2026-05-27)**
+- *Prediction:* Terminal zodiac folios (f73r/f73v) would have significantly lower temporal
+  variance (clock position std) than early zodiac (f69r–f72v3), on the assumption that
+  f73r's four-cluster protocol structure compresses positions into specific time windows.
+  Pre-registered at commit `717d6b3d`; within-group std values were unknown at pre-reg time.
+- *Result:* FAILED (batch4330, 2026-05-27). H1 FAILED: terminal std=3.89h > early std=3.59h
+  (opposite direction). H2 FAILED: Levene p=0.195 (not significant). H3 FAILED: all-class
+  and CH-specific directions inconsistent (terminal all-class std higher, terminal CH std
+  lower, neither significant). All 15 zodiac folios show std in the 3.4–4.0h range.
+- *Why it failed:* The zodiac clock face assigns positions at 30-minute increments spanning
+  0–12h uniformly for every folio — this is the clock design, not a pharmacological signal.
+  Terminal and early folios both use the full clock face, producing the same ~3.7h population
+  std. The four-cluster f73r structure (GL4325) is not position compression but pharmacological
+  class assignment: specific classes (CH, OT/OK) occupy specific hour windows while the
+  positions themselves span the full day in both groups.
+- *Informative implication:* Rules out the alternative that the f73r protocol is "fewer
+  clock positions." The temporal structure is encoded in which pharmacological class occupies
+  which hour, not in any reduction of temporal coverage. The clock face is the annotation
+  grid; the pharmacological class is the encoded message.
+- *Disposition:* NR-09 recorded. GL4330 result strengthens the class-assignment interpretation
+  of the pharmacological clock and closes the clock variance question.
+
 ---
 
 ## What the failures prove
