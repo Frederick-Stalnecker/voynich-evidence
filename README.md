@@ -80,6 +80,16 @@ python scripts/1_cipher.py
 # R=14 uniquely satisfies all 9 class-marker cribs; p=(1/17)^9=8.43e-12
 ```
 
+**On the provenance of the 9 cribs (cherry-picking defense):**
+
+The 9 class-marker cribs are the 9 EVA morpheme classes whose pharmaceutical or grammatical functions were established by pre-registered grammar law analysis *before* the R=14 rotation sweep ran. Specifically:
+
+- Grammar laws GL1–GL5 (herbal section markers: sh/ch/ok/ot/cth classes) were pre-registered and confirmed at batch 153 onward, with chi-square p-values below 10⁻²⁰.
+- The topic-boundary (daiin/v-class) and morpheme paradigm laws (dal/dar/silent-d) were committed as part of the pre-registration chain at commits `f4a4b59` + `1660e75` (2026-05-22), before the R=14 sweep ran.
+- The sweep itself was pre-registered at the same commits. See `PRE_REGISTRATIONS.md` Entry 4.
+
+The 9 cribs are not post-hoc selections. They are the complete set of EVA character classes that the grammar law analysis had independently assigned pharmaceutical roles. The combinatorial argument holds because each class independently constrains R to one of 17 values, and all 9 agree on R=14.
+
 **To test the syllabary's "no alternative reading" criterion:**
 ```bash
 python scripts/2_syllabary.py
