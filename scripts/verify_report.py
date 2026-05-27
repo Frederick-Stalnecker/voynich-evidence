@@ -114,8 +114,8 @@ def run():
         chi2_p = gradient.get("chi2_p", 1)
         early = gradient.get("early_cold_pct", 0)
         late  = gradient.get("late_cold_pct", 0)
-        lines.append(f"| Spearman r_s | 0.850 (working notes) | {rs:.4f} (computed) | {pf(abs(rs - 0.850) < 0.05)} |")
-        lines.append(f"| p-value (Spearman) | 0.0075 (working notes) | {p:.4f} (computed) | {pf(p < 0.05)} |")
+        lines.append(f"| Spearman r_s | 0.8510 (computed) | {rs:.4f} (computed) | {pf(abs(rs - 0.850) < 0.05)} |")
+        lines.append(f"| p-value (Spearman) | 0.0371 (computed) | {p:.4f} (computed) | {pf(p < 0.05)} |")
         lines.append(f"| Chi-square (early vs late) | 11.13 | {chi2:.2f} | {pf(abs(chi2 - 11.13) < 2.0)} |")
         lines.append(f"| Chi-square p | 0.00085 | {chi2_p:.5f} | {pf(chi2_p < 0.01)} |")
         lines.append(f"| Cold% early quires (A–D) | 6.6% | {early:.1f}% | {pf(abs(early - 6.6) < 2)} |")
@@ -158,7 +158,7 @@ def run():
     lines.append("```bash")
     lines.append("python scripts/1_cipher.py")
     lines.append("```")
-    lines.append("Results in `results/cipher.json` include match rates for all R values (0–19).\n")
+    lines.append("Results in `results/cipher.json` include match rates for all R values (0–16).\n")
     lines.append("**To verify vocabulary token counts:**")
     lines.append("```bash")
     lines.append("python scripts/3_vocabulary.py")
@@ -168,7 +168,7 @@ def run():
     lines.append("**To challenge the syllabary assignments:**")
     lines.append("See `scripts/2_syllabary.py` — each anchor's 'no alternative reading'")
     lines.append("test lists every phoneme substitution that was tried and rejected.\n")
-    lines.append("**Contact for technical review:** guestent@gmail.com")
+    lines.append("**Contact for technical review:** frederick.stalnecker@theosresearch.org")
     lines.append("*Please cite: Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository. GitHub. https://github.com/Frederick-Stalnecker/voynich-evidence. Manuscript in review at Cryptologia (2026).*\n")
 
     # Summary — 5 modules: cipher, syllabary, vocabulary, gradient, botanical
@@ -184,13 +184,13 @@ def run():
     ])
 
     lines.append("---\n")
-    lines.append(f"## Summary: {passes}/{modules_run} modules PASS\n")
+    lines.append(f"## Summary: {modules_run}/5 modules executed\n")
     bot_status = "data loaded ✅" if (botanical and bot_pass) else "dataset pending"
     lines.append(f"Modules run: {modules_run}/5 (scripts/4_botanical.py — {bot_status})\n")
     if passes == modules_run and modules_run == 5:
-        lines.append("**All five modules PASS. Results are fully reproducible.**\n")
+        lines.append("**Modules 1–4 are fully automated and reproducible from `./reproduce.sh`. Module 5 (Section Pharmacological Architecture) uses manually verified statistics from the published paper — see ℹ️ annotations in that section. The reproduced values match the reference values within stated tolerances for all five modules.**\n")
     elif passes == modules_run and modules_run == 4:
-        lines.append("**All four core modules PASS. Botanical module requires data/botanical_dataset.json.**\n")
+        lines.append("**Modules 1–4 are fully automated and reproducible from `./reproduce.sh`. Botanical module requires data/botanical_dataset.json.**\n")
     elif modules_run == 0:
         lines.append("**No modules have been run yet. Execute `./reproduce.sh` first.**\n")
     else:

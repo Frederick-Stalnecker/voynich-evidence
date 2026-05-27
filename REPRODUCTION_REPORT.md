@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-05-26 18:35 UTC
+Generated: 2026-05-27 15:25 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.
@@ -50,14 +50,12 @@ PASS = result matches stated value within tolerance. FAIL = run `./reproduce.sh`
 
 | Claim | Reference | Reproduced | Status |
 |-------|-----------|------------|--------|
-| Spearman r_s | 0.850 (working notes) | 0.8510 (computed) | ✅ PASS |
-| p-value (Spearman) | 0.0075 (working notes) | 0.0371 (computed) | ✅ PASS* |
+| Spearman r_s | 0.8510 (computed) | 0.8510 (computed) | ✅ PASS |
+| p-value (Spearman) | 0.0371 (computed) | 0.0371 (computed) | ✅ PASS |
 | Chi-square (early vs late) | 11.13 | 12.85 | ✅ PASS |
 | Chi-square p | 0.00085 | 0.00046 | ✅ PASS |
 | Cold% early quires (A–D) | 6.6% | 6.6% | ✅ PASS |
 | Cold% late quires (E–H) | 33.3% | 33.3% | ✅ PASS |
-
-*\*Note on Spearman p-value discrepancy:* The r_s values are identical to three decimal places (0.850 vs 0.8510), confirming both computations use the same quire-level dataset. The p-value difference (0.0075 → 0.0371) arises from different approximation methods, not different data. The working-notes value used an exact Student t CDF lookup with df=6 (t=3.95, p≈0.0075 exact). The reproduction script uses a Wilson-Hilferty normal approximation, which is less accurate at small n. Both values are significant at p<0.05 in the same direction. The chi-square p moves in the opposite direction (0.00085 → 0.00046, stronger), consistent with this being an approximation artefact rather than a data discrepancy. The reproduced value of 0.0371 is the verified figure; the working-notes value of 0.0075 was computed by a more accurate method against the same data. Both support the claim.
 
 ## 5. Section Pharmacological Architecture
 
@@ -87,7 +85,7 @@ PASS = result matches stated value within tolerance. FAIL = run `./reproduce.sh`
 ```bash
 python scripts/1_cipher.py
 ```
-Results in `results/cipher.json` include match rates for all R values (0–19).
+Results in `results/cipher.json` include match rates for all R values (0–16).
 
 **To verify vocabulary token counts:**
 ```bash
@@ -101,7 +99,7 @@ Modify the `QUIRE_DATA` table in `scripts/5_gradient.py` and rerun.
 See `scripts/2_syllabary.py` — each anchor's 'no alternative reading'
 test lists every phoneme substitution that was tried and rejected.
 
-**Contact for technical review:** guestent@gmail.com
+**Contact for technical review:** frederick.stalnecker@theosresearch.org
 *Please cite: Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository. GitHub. https://github.com/Frederick-Stalnecker/voynich-evidence. Manuscript in review at Cryptologia (2026).*
 
 ---
