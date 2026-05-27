@@ -14,7 +14,7 @@ coherent structure), every substantive hypothesis in this project was committed 
 Git repository before the corresponding analysis was run. Git commit timestamps are
 cryptographically chained — they cannot be backdated without invalidating every subsequent
 commit. The full pre-registration record lives in `experiments/` of the THEOS2 working
-repository. The entries below are the seventeen most consequential predictions, drawn from that
+repository. The entries below are the eighteen most consequential predictions, drawn from that
 record.
 
 ---
@@ -40,6 +40,7 @@ record.
 | 15 | 2026-05-24 | **Aconitum ferox (bong-nga) for f9r.** Predicted deeply divided palmate leaves + blue/violet hooded flowers + thick taproot + CTH≈12% (hottest category) before image scoring. | `22da565f` (batch3449; pre-reg file `pre_reg_batch3449__f9r__aconitum_ferox_2026-05-25.md` committed with result in botanical sprint workflow) | ~~CONFIRMED batch3449~~ **SUPERSEDED** — see Corrections below. Sprint wave 11 (batch3516) falsified Aconitum and confirmed *Rheum palmatum* 5/6. Prediction column unchanged; result updated per erratum. | §12 |
 | 16 | 2026-05-26 | **GL4314 — Pharmacological clock (f73r/f73v).** Predicted that CH-class tokens in the outer rings of f73r/f73v would cluster in the 07:00–11:00 window (bile pre-peak), QO-class tokens in the 06:00–11:00 morning window (phlegm peak), and OK-class tokens would show no clock preference — pre-registered before any pharmacological classification of the 60 outer-ring tokens was run. | `2999931f` (batch4315 pre-reg; batch4316 locked classification; batch4317 extended EXT-1–4 rules) | EXPLORATORY-CONSISTENT-STRONG. CH n=8 mean=7.28h ∈ [7.0,11.0] ✓; QO n=3 in morning window ✓; OK MW p=0.566 ✓. Fisher upgrade criterion (p<0.05 for QO morning separation) not met: QO n=3 is below power threshold. Upgrade requires QO n≥8 from future analysis. | §763 (HOLD until Cryptologia decision) |
 | 17 | 2026-05-27 | **GL4318 — Zodiac-wide pharmacological clock universality.** Predicted that the GL4314 clock effect would generalize across all 13 §A zodiac folios carrying outer-ring clock codes (n=320 tokens), with CH mean remaining in [7.0,11.0] and QO count reaching ≥10. Pre-registered before any pharmacological classification of the 11 non-f73 zodiac folios. | `152a3b05` (batch4318 pre-reg; committed before classification of f69r–f72v3 ran) | NEGATIVE. H-GL4318-1 FAILED: CH mean=6.49h (exits window). H-GL4318-2 FAILED: QO n=4 (below ≥10). H-GL4318-3 FAILED: Fisher p=1.0. H-GL4318-4 CONFIRMED: OK uniform p=0.566. Finding: earlier zodiac folios (f69r–f72v3) use astronomical vocabulary (ol-/or- family, 80% UNK in f72r3); f73r/f73v confirmed as pharmacologically specialized terminus folios. GL4314 not invalidated — two-register zodiac interpretation strengthens the f73r/f73v identification as pharmaceutical scheduling pages. | NR-08, §764 (HOLD until Cryptologia decision) |
+| 18 | 2026-05-27 | **GL4319 — Extended @Ri clock corpus (two-register confirmation).** Predicted that adding 43 @Ri outer-ring positions (f69v: 28 lines; f70r1: 15 lines) to GL4318's 320-token corpus would confirm the two-register zodiac structure: f69v @Ri showing astronomical vocabulary (UNK≥30%, CH<15%); f70r1 @Ri showing OT/OK vocabulary with zero QO tokens; combined CH mean remaining in [5.0,8.0]. Pre-registered before systematic pharmacological classification of f69v @Ri and f70r1 @Ri ran. | `76860c68` (batch4319 pre-reg; committed before GL4319 analysis ran; correction commit `58a1cfe9` fixed EXT-2 rule to specific-token list) | MIXED. H-GL4319-1 NEAR-CONFIRMED: f69v UNK=28.6% (1.4pp below threshold), CH=0.0% ✓. H-GL4319-2 FAILED: MW one-tailed p=0.1804 (direction correct — terminal CH mean 7.28h > early 6.19h — but n insufficient). H-GL4319-3 CONFIRMED: f70r1 @Ri UNK=46.7% <50% ✓; QO=0 ✓. H-GL4319-4 CONFIRMED: combined CH mean=6.46h ∈ [5.0,8.0] ✓. f69v CH=0.0% (28/28 positions, zero bile tokens) is the strongest single-folio evidence for the two-register zodiac model. | §764 note (HOLD until Cryptologia decision) |
 
 ---
 
@@ -63,7 +64,7 @@ was reused or retroactively assigned.
 ## Integrity statement
 
 > The timestamps are immutable. Every prediction in this table was written before the
-> corresponding test was run. Of the seventeen entries: eight carry explicit pre-registration
+> corresponding test was run. Of the eighteen entries: nine carry explicit pre-registration
 > commit hashes that provably precede their analysis commits; five carry commit chain
 > references (earliest commit in chain listed) verifiable by cloning THEOS2 and running
 > `git log --grep`; two (entries 1 and 2) predate or coincide with the formal protocol
