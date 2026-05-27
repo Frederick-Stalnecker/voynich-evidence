@@ -8,8 +8,9 @@ document does neither. Every entry here was pre-registered before the test that 
 failures are part of the evidence — they demonstrate that the testing apparatus is real, that
 the method has predictive teeth, and that confirmation bias was not the engine driving results.
 
-Eleven of fifteen major structural predictions confirmed. The four that didn't are documented
-below in full. So are the botanical identifications we corrected mid-sprint, the authorship
+Eleven of seventeen major structural predictions confirmed; one (GL4314, entry 16) confirmed
+at EXPLORATORY-CONSISTENT-STRONG (upgrade to CONFIRMATORY pending QO n≥8). Eight negative
+or null results are documented below in full — every one was pre-registered. So are the botanical identifications we corrected mid-sprint, the authorship
 claim we retracted when primary sources failed to support it, the known gaps in the syllabary,
 and the methodological limitations that remain open.
 
@@ -255,6 +256,30 @@ complete and accurate account of the syllabary's current scope.
   during a blind test of the reproduction pipeline: the script returned different numbers
   than the working notes, and the discrepancy was investigated and documented rather than
   suppressed. The corrected values replace the working-note values in all public materials.
+
+**NR-08 — GL4318: Zodiac-wide pharmacological clock universality (2026-05-27)**
+- *Prediction:* The GL4314 pharmacological clock (CH tokens clustering in 07:00–11:00 across
+  f73r/f73v) would generalize across all 13 §A zodiac folios carrying outer-ring clock codes
+  (@Lz, &Lz, @Ro), producing CH mean ∈ [7.0, 11.0] over N=320 tokens and QO count ≥10.
+  Pre-registered at commit `152a3b05` before any pharmacological classification of the
+  11 non-f73 zodiac folios was performed.
+- *Result:* NEGATIVE (batch4318, 2026-05-27). H-GL4318-1 FAILED: CH mean = 6.49h (exits
+  window). H-GL4318-2 FAILED: QO n=4 (below ≥10 threshold). H-GL4318-3 FAILED: Fisher p=1.0.
+  H-GL4318-4 CONFIRMED: OK uniform MW p=0.566.
+- *Why it failed:* Vocabulary stratification. Earlier zodiac folios (f69r–f72v3) are dominated
+  by `ol-`, `or-`, `oe-` initial families not present in the locked pharmacological classifier
+  (80% UNK in f72r3). CH-class tokens in these folios cluster in the pre-dawn window
+  (00:30–06:45h), pulling the combined CH mean from 7.28h (f73r/f73v only) to 6.49h (all 13
+  folios). Earlier zodiac folios encode an astronomical/calendar register; f73r/f73v encode a
+  pharmaceutical timing register.
+- *GL4314 status:* EXPLORATORY-CONSISTENT-STRONG (unchanged). GL4318 tested zodiac
+  universality; GL4314 tested f73r/f73v specifically. The negative result places GL4314 in
+  sharper scope: the pharmacological clock is a property of the terminal zodiac folios, not
+  the zodiac section as a whole. This two-register interpretation — astronomical calendar
+  (f69r–f72v3) followed by daily pharmaceutical scheduling (f73r–f73v) — is consistent with
+  the §A visual evidence and with Sowa Rigpa medical astronomy practice.
+- *Disposition:* NR-08 recorded as a genuine pre-registered negative result. GL4318 paper
+  section (§764) drafted; on hold until Cryptologia decision (~June 3, 2026).
 
 ---
 
