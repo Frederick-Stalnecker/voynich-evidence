@@ -303,6 +303,26 @@ complete and accurate account of the syllabary's current scope.
 - *Disposition:* NR-09 recorded. GL4330 result strengthens the class-assignment interpretation
   of the pharmacological clock and closes the clock variance question.
 
+**NR-10 — zodiac-astro vs. fRos @Cc clock equivalence (GL4336)**
+- *Prediction:* fRos @Cc clock positions (n=9, mean=5.89h, σ=3.63h) and zodiac-astro @Cc
+  clock positions would be statistically equivalent at both mean (MW p > 0.05) and variance
+  (Levene p > 0.10) levels — completing the four-register model by establishing that fRos
+  "belongs to the same register as zodiac-astro."
+- *Result:* FAILED (0/3). Zodiac-astro @Cc tokens (n=38, mean=10.06h, σ=0.92h, range 8.5–12.0h)
+  are dramatically different from fRos @Cc (MW p=0.0009; Levene F=23.52, p<0.0001; variance
+  ratio=15.5). Zodiac-astro @Cc clusters near-peak (~10h) like f68-series, NOT full-clock like
+  fRos. The pre-registered prediction was based on an incorrect assumption: the "zodiac mean=5.59h"
+  in prior GLs came from @Ro/@Lz/@Ri outer-ring position codes, not @Cc. The @Cc position code
+  in zodiac folios marks the WHEEL CENTER (hub), which encodes near-peak timing (~10h). The @Ro/
+  @Lz outer-ring positions span the full clock face (~5.6h). fRos @Cc (5.89h) matches the zodiac
+  outer-ring, not the zodiac center.
+- *Disposition:* NR-10 recorded. The finding generates GL4337 (zodiac @Cc ≈ f68-series @Cc,
+  both near-peak): if @Cc consistently marks near-peak timing across zodiac AND f68 sections,
+  fRos @Cc (5.89h, full-clock) is the structural outlier requiring explanation. The four-register
+  model as published in GL4333/GL4334 remains valid (fRos @Cc vs. f68-series @Cc comparison is
+  still apple-to-apple), but the claim that fRos "belongs to the same register as zodiac-astro"
+  is not supported at the @Cc level.
+
 ---
 
 ## What the failures prove
