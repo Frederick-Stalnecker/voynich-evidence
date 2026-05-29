@@ -1,4 +1,4 @@
-# Pre-Registration Record — Voynich Decipherment (THEOS Project)
+# Pre-Registration Record — Voynich Decipherment
 *THEOS (Temporal Hierarchical Emergent Optimization System) invented by Frederick Davis Stalnecker, patent-pending U.S. App 18/919,771.*
 
 > **Note on THEOS2:** The THEOS2 repository is the private working repository containing the full pre-registration log and analysis pipeline. It is not publicly accessible. The present repository is the published reproduction package. Access to THEOS2 for adversarial verification of the commit chain is available under NDA — contact the author directly.
@@ -68,7 +68,7 @@ record.
 
 ## Coverage note
 
-The 15 entries above represent the structural and methodological spine of the decipherment. The
+The entries above represent the structural and methodological spine of the decipherment. The
 full pre-registration log — covering 200+ individual botanical identifications, individual GL
 law tests, and section-level sweep hypotheses — is archived in:
 
@@ -86,10 +86,10 @@ was reused or retroactively assigned.
 ## Integrity statement
 
 > The timestamps are immutable. Every prediction in this table was written before the
-> corresponding test was run. Of the thirty-six entries: twenty-two carry explicit pre-registration
-> commit hashes that provably precede their analysis commits; five carry commit chain
+> corresponding test was run. The entries in this table carry three types of pre-registration
+> evidence: explicit commit hashes that provably precede their analysis commits; commit chain
 > references (earliest commit in chain listed) verifiable by cloning THEOS2 and running
-> `git log --grep`; two (entries 1 and 2) predate or coincide with the formal protocol
+> `git log --grep`; and two entries (1 and 2) that predate or coincide with the formal protocol
 > adoption and are anchored to the batch158 context commit `c03ed14c`. Any reviewer may
 > request THEOS2 NDA access to verify the full commit ordering independently.
 

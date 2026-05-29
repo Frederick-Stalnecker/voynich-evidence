@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use or challenge this evidence repository, please cite as:"
+message: "If you use this repository, please cite it as below."
 type: software
 title: "Voynich Manuscript Decipherment — Evidence Repository"
 abstract: >
@@ -11,7 +11,7 @@ abstract: >
 authors:
   - family-names: Stalnecker
     given-names: Frederick Davis
-    email: guestent@gmail.com
+    email: frederick.stalnecker@theosresearch.org
 repository-code: "https://github.com/Frederick-Stalnecker/voynich-evidence"
 keywords:
   - Voynich Manuscript

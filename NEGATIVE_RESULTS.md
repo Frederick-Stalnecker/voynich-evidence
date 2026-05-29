@@ -1,4 +1,4 @@
-# Negative Results — Voynich Decipherment (THEOS Project)
+# Negative Results — Voynich Decipherment
 
 ## We publish our failures because science requires it.
 
@@ -8,9 +8,11 @@ document does neither. Every entry here was pre-registered before the test that 
 failures are part of the evidence — they demonstrate that the testing apparatus is real, that
 the method has predictive teeth, and that confirmation bias was not the engine driving results.
 
-Eleven of seventeen major structural predictions confirmed; one (GL4314, entry 16) confirmed
-at EXPLORATORY-CONSISTENT-STRONG (upgrade to CONFIRMATORY pending QO n≥8). Eight negative
-or null results are documented below in full — every one was pre-registered. So are the botanical identifications we corrected mid-sprint, the authorship
+The current confirmation record across all pre-registered structural predictions is documented
+in PRE_REGISTRATIONS.md (the authoritative source for counts and outcomes as the research
+continues). One prediction (GL4314, entry 16) is confirmed at EXPLORATORY-CONSISTENT-STRONG
+(upgrade to CONFIRMATORY pending QO n≥8). Eight negative or null results are documented below
+in full — every one was pre-registered. So are the botanical identifications we corrected mid-sprint, the authorship
 claim we retracted when primary sources failed to support it, the known gaps in the syllabary,
 and the methodological limitations that remain open.
 

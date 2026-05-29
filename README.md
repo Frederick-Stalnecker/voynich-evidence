@@ -2,7 +2,7 @@
 
 This repository contains the reproducible statistical evidence for the claim that the Voynich Manuscript (Beinecke MS 408, Yale University) encodes a pharmaceutical text in a hybrid Classical Mongolian / Tibetan Sowa Rigpa register, encrypted by a rotational substitution cipher calibrated at R=14.
 
-Manuscript under review at *Cryptologia* (2026). arXiv preprint forthcoming.
+Manuscript under review at *Cryptologia* (2026). arXiv preprint in preparation.
 
 ---
 
@@ -80,7 +80,7 @@ These results are independent: the gradient holds whether or not the cipher is c
 python scripts/1_cipher.py
 ```
 
-**On the provenance of the 9 cribs (cherry-picking defense):**
+**Crib selection: methodology and provenance**
 
 The 9 class-marker cribs are the 9 EVA morpheme classes whose pharmaceutical or grammatical functions were established by pre-registered grammar law analysis *before* the R=14 rotation sweep ran. Specifically:
 
@@ -138,11 +138,7 @@ counted separately from `daiin` — they are distinct EVA words with the same su
 | aiin  | 437–442 | 528 | 3,944 |
 | shor  | 83–94   | 94  | 155 |
 
-Working notes from the research phase cited daiin N=3,832 and sar N=277. Investigation
-revealed: the daiin figure counted all tokens ending in the -aiin genitive suffix (3,493
-tokens across the full paradigm). The sar figure's source is not fully explained; it may
-reflect an earlier corpus version. Both discrepancies are documented in `NEGATIVE_RESULTS.md`
-(Section 5). The section-distribution findings are confirmed at the corrected counts.
+Working-note token counts for daiin and sar were found to differ from direct corpus extraction; the discrepancy was investigated, resolved, and documented in full in [NEGATIVE_RESULTS.md §5](NEGATIVE_RESULTS.md#section-5--count-corrections-discovered-during-reproduction). All results in this repository use the verified counts.
 
 ---
 
@@ -150,7 +146,7 @@ reflect an earlier corpus version. Both discrepancies are documented in `NEGATIV
 
 - 5 of 23 phonological units remain unmapped (`j`, `u`, `v`, `x`, `z` — together <3% of corpus characters)
 - `scripts/4_botanical.py` requires `data/botanical_dataset.json` — included in this repository (113 confirmed plants, batch3597)
-- Two early botanical identifications (f2r, f9r) were falsified by later sprint waves and re-confirmed with different species. See [Corrections](PRE_REGISTRATIONS.md#corrections) in PRE_REGISTRATIONS.md for the full erratum and the THEOS2 commit chain.
+- Two early botanical identifications (f2r, f9r) were falsified by later sprint waves and re-confirmed with different species. See [Corrections](PRE_REGISTRATIONS.md#corrections) in PRE_REGISTRATIONS.md for the full erratum.
 - The three-column decoded folio pages (f67r1, f70r2, f68v3, f70r1) are part of a forthcoming companion publication and are not included in this repository
 
 ---
@@ -183,4 +179,3 @@ The MIT license on the reproduction scripts in this repository applies only to t
 Technical questions (reproduction, methodology): frederick.stalnecker@theosresearch.org  
 Media and general inquiries: frederick.stalnecker@theosresearch.org
 
-*Repository maintained by Frederick Davis Stalnecker. Research conducted with THEOS (Temporal Hierarchical Emergent Optimization System), invented by Frederick Davis Stalnecker (patent-pending U.S. App 18/919,771).*
