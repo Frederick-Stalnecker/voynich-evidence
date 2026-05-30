@@ -17,7 +17,7 @@ from pathlib import Path
 
 RESULTS_PATH = Path(__file__).parent.parent / "results" / "gradient.json"
 
-# Quire-level data from GL4313 verification (commit 538dbf74, THEOS2 repo)
+# Quire-level data from GL4313 verification (commit 538dbf74, VoynichPapers repo)
 # Source: 113-plant botanical sprint, waves 1–29
 QUIRE_DATA = [
     # (quire_name, quire_index, n_tokens, n_cold, cold_pct, mean_CTH)

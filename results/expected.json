@@ -20,11 +20,11 @@
   "_vocabulary_note": "Counts verified by direct corpus extraction (scripts/3_vocabulary.py). Working notes cited sar=277 and daiin=3832 — discrepancy documented in NEGATIVE_RESULTS.md Section 5.",
 
   "section_distributions": {
-    "shor_H_pct":  71.1,
-    "qol_B_pct":   76.6,
+    "shor_H_pct":  68.5,
+    "qol_B_pct":   76.1,
     "qokal_B_pct": 57.1,
     "cheol_T_pct": 35.7,
-    "daiin_H_pct": 54.7,
+    "daiin_H_pct": 51.8,
     "sar_claim": "Distributed across §H/§B/§T — functions as pharmaceutical timing marker, not exclusively astronomical"
   },
 
@@ -50,10 +50,10 @@
 
   "GL4313_gradient": {
     "spearman_r": 0.850,
-    "p_value": 0.0075,
+    "p_value": 0.0371,
     "n_quires": 8,
-    "chi2_early_vs_late": 11.13,
-    "chi2_p_value": 0.00085,
+    "chi2_early_vs_late": 12.85,
+    "chi2_p_value": 0.00046,
     "cold_pct_early_A_D": 6.6,
     "cold_pct_late_E_H": 33.3,
     "quire_data": {

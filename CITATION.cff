@@ -11,6 +11,7 @@ abstract: >
 authors:
   - family-names: Stalnecker
     given-names: Frederick Davis
+    orcid: "https://orcid.org/0009-0009-9063-7438"
     email: frederick.stalnecker@theosresearch.org
 repository-code: "https://github.com/Frederick-Stalnecker/voynich-evidence"
 keywords:

@@ -32,7 +32,7 @@ Five independent statistical results, each pre-registered before testing:
 |-------|------|--------|
 | R=14 is the cipher calibration parameter | Crib convergence (9 class-marker cribs) | p = (1/17)⁹ < 10⁻¹¹ |
 | Syllabary: 19/23 characters T1-confirmed | Anchor chain analysis | No alternative reading works |
-| Pharmaceutical vocabulary section-consistent | Chi-square, section distribution | shor §H=68.5%; qol §B=76.6% |
+| Pharmaceutical vocabulary section-consistent | Chi-square, section distribution | shor §H=68.5%; qol §B=76.1% |
 | §H organized as pharmacological gradient | Spearman r_s=0.850 | p=0.0371 (8 quires; see REPRODUCTION_REPORT §4 note) |
 | Three-humor section architecture | Kruskal-Wallis | p=4×10⁻²⁴ |
 
