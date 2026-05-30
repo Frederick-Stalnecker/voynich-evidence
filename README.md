@@ -151,6 +151,12 @@ Working-note token counts for daiin and sar were found to differ from direct cor
 
 ---
 
+## Tooling Disclosure
+
+The reproduction scripts in this repository were formatted and structured with the assistance of AI coding tools (Anthropic Claude). The commit history reflects this collaboration. The underlying research — including all pre-registered hypotheses, the cipher analysis, the syllabary derivation, the botanical identifications, and the pharmacological gradient discovery — is the original intellectual work of the author. The AI tools were used for code scaffolding, statistical script formatting, and repository organization. All mathematical logic, data, and scientific claims are the author's sole responsibility.
+
+---
+
 ## Citation
 
 This work is currently under review at *Cryptologia*. Until publication, please cite as:

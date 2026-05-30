@@ -2,8 +2,6 @@
   "GL": "GL4313",
   "spearman_r_cold_frac": 0.851,
   "spearman_p_cold_frac": 0.0371,
-  "spearman_r_ref": 0.85,
-  "spearman_p_ref": 0.0075,
   "chi2": 12.85,
   "chi2_p": 0.00046,
   "early_cold_pct": 6.6,

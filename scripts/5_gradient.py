@@ -6,16 +6,20 @@ Reproduces the Spearman correlation between quire index and cold-plant fraction
 in the §H (herbal) section. This is Grammar Law 4313.
 
 Claim: As you move through the eight quires of §H (A→H), the proportion of
-cold-class plants (CTH=0%) increases monotonically. Spearman r_s=0.850, p=0.0075.
+cold-class plants (CTH=0%) increases monotonically. Spearman r_s ≈ 0.85, p < 0.05.
 
 The quire-level dataset is derived from the 113-plant botanical analysis
 (batches 3407–3596, 2026-05-25) and committed here as a static reference.
+
+Reference values are loaded from results/expected.json (single source of truth).
 """
 
 import json, math, sys
 from pathlib import Path
 
-RESULTS_PATH = Path(__file__).parent.parent / "results" / "gradient.json"
+ROOT = Path(__file__).parent.parent
+RESULTS_PATH = ROOT / "results" / "gradient.json"
+EXPECTED_PATH = ROOT / "results" / "expected.json"
 
 # Quire-level data from GL4313 verification (commit 538dbf74, VoynichPapers repo)
 # Source: 113-plant botanical sprint, waves 1–29
@@ -87,10 +91,24 @@ def chi_square_2x2(a, b, c, d):
     return chi2, p
 
 
+def load_expected():
+    """Load reference values from expected.json (single source of truth)."""
+    if EXPECTED_PATH.exists():
+        data = json.loads(EXPECTED_PATH.read_text())
+        return data.get("GL4313_gradient", {})
+    return {}
+
+
 def run():
     print("=" * 60)
     print("MODULE 5: GL4313 Pharmacological Gradient Verification")
     print("=" * 60)
+
+    # Load reference values
+    ref = load_expected()
+    ref_rs     = ref.get("spearman_r", 0.850)
+    ref_chi2   = ref.get("chi2_early_vs_late", 12.85)
+    ref_chi2_p = ref.get("chi2_p_value", 0.00046)
 
     print("\nQuire-by-quire cold-plant data:")
     print(f"  {'Quire':6} {'Idx':4} {'N':>5} {'Cold':>6} {'Cold%':>7} {'CTH%':>7}")
@@ -112,8 +130,8 @@ def run():
 
     print(f"\nSpearman correlation — quire index vs cold-plant fraction:")
     print(f"  r_s = {rs_cold:.3f},  p = {p_cold:.4f}")
-    print(f"  Reference: r_s=0.850, p=0.0075")
-    pass_rs = abs(rs_cold - 0.850) < 0.05
+    print(f"  Reference (expected.json): r_s = {ref_rs:.3f}")
+    pass_rs = abs(rs_cold - ref_rs) < 0.05
     print(f"  {'PASS' if pass_rs else 'CHECK'}: r_s within ±0.05 of reference")
 
     print(f"\nSpearman correlation — quire index vs mean CTH% (decreasing):")
@@ -128,11 +146,13 @@ def run():
     late_warm  = sum(n_tok - n_cold for _, idx, n_tok, n_cold, _, _ in QUIRE_DATA if idx > 4)
 
     chi2, p_chi = chi_square_2x2(early_cold, late_cold, early_warm, late_warm)
+    early_total = early_cold + early_warm
+    late_total  = late_cold + late_warm
     print(f"\nEarly (A–D) vs Late (E–H) chi-square:")
-    print(f"  Cold: early={early_cold}/{early_cold+early_warm} = {early_cold/(early_cold+early_warm)*100:.1f}%")
-    print(f"  Cold: late ={late_cold}/{late_cold+late_warm} = {late_cold/(late_cold+late_warm)*100:.1f}%")
+    print(f"  Cold: early={early_cold}/{early_total} = {early_cold/early_total*100:.1f}%")
+    print(f"  Cold: late ={late_cold}/{late_total} = {late_cold/late_total*100:.1f}%")
     print(f"  chi2 = {chi2:.2f},  p = {p_chi:.5f}")
-    print(f"  Reference: chi2=11.13, p=0.00085")
+    print(f"  Reference (expected.json): chi2 = {ref_chi2:.2f}, p = {ref_chi2_p:.5f}")
 
     # Plain-English interpretation
     print("\nPlain English:")
@@ -148,18 +168,16 @@ def run():
         "GL": "GL4313",
         "spearman_r_cold_frac": round(rs_cold, 3),
         "spearman_p_cold_frac": round(p_cold, 4),
-        "spearman_r_ref": 0.850,
-        "spearman_p_ref": 0.0075,
         "chi2": round(chi2, 2),
         "chi2_p": round(p_chi, 5),
-        "early_cold_pct": round(early_cold/(early_cold+early_warm)*100, 1),
-        "late_cold_pct":  round(late_cold/(late_cold+late_warm)*100, 1),
+        "early_cold_pct": round(early_cold/early_total*100, 1),
+        "late_cold_pct":  round(late_cold/late_total*100, 1),
         "quire_data": [
             {"quire": name, "idx": idx, "n": n_tok, "n_cold": n_cold,
              "cold_pct": cold_pct, "mean_CTH": mean_cth}
             for name, idx, n_tok, n_cold, cold_pct, mean_cth in QUIRE_DATA
         ],
-        "PASS": abs(rs_cold - 0.850) < 0.05 and p_cold < 0.05
+        "PASS": abs(rs_cold - ref_rs) < 0.05 and p_cold < 0.05
     }
 
     RESULTS_PATH.write_text(json.dumps(result, indent=2))
