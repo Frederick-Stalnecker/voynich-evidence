@@ -15,10 +15,10 @@ property of Frederick Davis Stalnecker and THEOS Research Institute.
 The scripts in this repository are downstream outputs that apply statistical tests
 to Voynich corpus data. They are not THEOS itself. Reproduction, modification, or
 redistribution of the scripts under the MIT terms below does not constitute a
-license to THEOS, its dual-engine architecture, its Governor classifier, its
-LoRA adapters, its phi convergence metric, its synthesis layer, or any other
-THEOS component, whether disclosed in the above-referenced patent application or
-otherwise.
+license to THEOS or any of its proprietary components, methods, or
+architectural elements, whether disclosed in the above-referenced patent
+application or otherwise. All THEOS internals remain trade secrets and
+exclusive intellectual property of the inventor.
 
 ---
 
